@@ -4,11 +4,10 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-    
-  ],
-  base: '/10on10-Foundation/'
-  
+  plugins: [react(), tailwindcss()],
+  base: '/10on10-Foundation/',
+  build: {
+    outDir: 'docs'
+  }
 })
+
