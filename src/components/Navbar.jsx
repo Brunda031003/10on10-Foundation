@@ -87,7 +87,8 @@ const Navbar = () => {
 
         {/* Logo */}
         <a href="/" className="flex items-center">
-          <img src="./images/Logo.png" alt="Logo" className="h-10 w-auto" />
+          {/** use BASE_URL so images work on GitHub Pages subpath */}
+          <img src={`${import.meta.env.BASE_URL || '/'}images/Logo.png`} alt="Logo" className="h-10 w-auto" />
         </a>
 
         {/* Desktop Menu */}

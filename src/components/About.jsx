@@ -1,6 +1,8 @@
 import React from 'react'
 
 const About = () => {
+  const base = import.meta.env.BASE_URL || '/'
+
   return (
     <section id="about" className="w-full bg-[#0074B5] py-16 md:py-15 px-6 scroll-mt-20 md:scroll-mt-24">
       <div className="max-w-6xl mx-auto text-center mb-12">
@@ -23,7 +25,7 @@ const About = () => {
         {/* Left - Image */}
         <div className="md:w-[330px] w-full flex justify-center order-1 md:order-1">
           <img
-            src="./images/Founder.jpg"
+            src={`${base}images/Founder.jpg`}
             alt="About Us"
             className="rounded-xl shadow-2xl w-full max-w-xs md:max-w-sm object-cover"
           />
