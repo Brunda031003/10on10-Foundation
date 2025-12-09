@@ -23,7 +23,7 @@ const About = () => {
         {/* Left - Image */}
         <div className="md:w-[330px] w-full flex justify-center order-1 md:order-1">
           <img
-            src="/images/Founder.jpg"
+            src="./images/Founder.jpg"
             alt="About Us"
             className="rounded-xl shadow-2xl w-full max-w-xs md:max-w-sm object-cover"
           />

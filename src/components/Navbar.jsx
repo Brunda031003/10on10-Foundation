@@ -87,7 +87,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <a href="/" className="flex items-center">
-          <img src="/images/Logo.png" alt="Logo" className="h-10 w-auto" />
+          <img src="./images/Logo.png" alt="Logo" className="h-10 w-auto" />
         </a>
 
         {/* Desktop Menu */}
