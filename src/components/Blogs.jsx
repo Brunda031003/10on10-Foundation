@@ -48,9 +48,9 @@ const Blogs = () => {
   return (
     <div
       id="blog"
-      className="bg-[#FF9933] py-16 px-6 md:px-12 scroll-mt-20 md:scroll-mt-24"
+      className="bg-white py-16 px-6 md:px-12 scroll-mt-20 md:scroll-mt-24"
     >
-      <h2 className="text-5xl md:text-6xl font-bold text-center text-black mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold text-center text-black mb-12">
         BLOGS
       </h2>
 

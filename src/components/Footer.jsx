@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center gap-4 text-white">
           <span className="font-semibold">Contact Us:</span>
           <a
-            href="https://www.youtube.com/example"
+            href="https://youtube.com/@10on10social"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 hover:text-gray-300"
@@ -17,7 +17,7 @@ export default function Footer() {
             <FaYoutube /> YouTube
           </a>
           <a
-            href="https://www.instagram.com/example"
+            href="https://www.instagram.com/10on10foundation/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 hover:text-gray-300"
@@ -25,7 +25,7 @@ export default function Footer() {
             <FaInstagram /> Instagram
           </a>
           <a
-            href="mailto:info@example.com"
+            href="mailto:info@10on10.org"
             className="flex items-center gap-1 hover:text-gray-300"
           >
             <FaEnvelope /> Mail

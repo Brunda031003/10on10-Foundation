@@ -3,45 +3,37 @@ import React, { useMemo } from "react";
 const Impact = () => {
   const stories = [
     {
-      img: "images/impact/Person1.jpg",
-      title: "From Overwhelmed to Empowered: Alex's Journey",
+      video: "https://www.youtube.com/embed/a7BQwgU-GVY?controls=0&rel=0",
+      title: "Once shy. Now unstoppable ✨",
       short:
-        "When Alex joined our leadership program, she was struggling to balance her team's needs with organizational goals...",
+        "He sat in class with low confidence—hiding behind books, hoping the teacher wouldn’t notice him. Speaking up felt impossible.",
       long:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam...",
+        "Fast forward to today 🚀He volunteers to read aloud, speaks with confidence, and owns the room. His maths scores are up 📈, and at his school’s Model United Nations, he researched Bosnia like a pro—using AI to create a full document that left even his dad amazed 🤯From quiet corners to confident conversations—this is what growth looks like. 💪📚",
     },
     {
-      img: "images/impact/Person2.jpg",
-      title: "Ravi Turned Challenges Into Opportunities",
+      video: "https://www.youtube.com/embed/MAo11rg3x3c?controls=0&rel=0",
+      title: "From shy and hesitant to confident and trusted ✨",
       short:
-        "Ravi felt directionless until he discovered our youth mentorship initiative...",
+        "There was a time when she was scared to talk to strangers, always procrastinating, always holding back. Speaking up didn’t come easy.",
       long:
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos...",
+        "Today, she volunteers in NCC to teach her juniors—and does it with pride 💪 Watching them learn because of her makes her feel confident and accomplished.She’s more open with her parents now, sharing thoughts she once kept to herself 💛 And among her friends, she’s become the one they turn to—the listener, the trustworthy shoulder.Growth isn’t just about speaking louder. It’s about standing taller. 🌱",
     },
     {
-      img: "images/impact/Person3.jpg",
-      title: "Sara Found Her Voice Through Leadership",
+      video: "https://www.youtube.com/embed/FbxjPJoiZnU?controls=0&rel=0",
+      title: "From giving up easily to growing stronger every day 🚀",
       short:
-        "Soft-spoken Sara learned how to lead confidently and inspire others...",
+        "He was once short-tempered, shy, and quiet—rarely speaking to anyone and struggling in certain subjects. Confidence felt far away, and communicating fluently seemed impossible.",
       long:
-        "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur adipisci velit sed quia non numquam eius modi...",
+        "Now, look at the change! ✨He’s calmer, kinder, and more confident. He doesn’t give up anymore. He concentrates better in class, understands concepts clearly, and talks more openly with others.The biggest win? The subjects he once found difficult are now his strengths 📚💪",
     },
     {
-      img: "images/impact/Person4.jpg",
-      title: "David's Growth From Self-Doubt to Self-Belief",
+      video: "https://www.youtube.com/embed/UxXmrYwJIL8",
+      title: "From exam stress to calm confidence ✨",
       short:
-        "David struggled with confidence, but consistent mentoring changed everything...",
+        "He once felt overwhelmed by exams and wrote just average. He joined the workshop to improve his social skills and learn how to connect with others.",
       long:
-        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam nisi ut aliquid ex ea commodi...",
-    },
-    {
-      img: "images/impact/Person5.jpg",
-      title: "Meera Became a Community Change-Maker",
-      short:
-        "Meera’s passion for social impact transformed into real-world action after joining our workshops...",
-      long:
-        "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum qui dolorem...",
-    },
+        "Today, he’s calmer, more patient, and more focused 🌱That calm showed up where it mattered most—he wrote well in his exams, and made his parents proud 💪📚 Less stress. More confidence. Real growth.",
+    }
   ];
 
   // Pick ONE random story
@@ -55,7 +47,7 @@ const Impact = () => {
       className="min-h-screen bg-[#FF9933] py-12 px-4 md:px-8 scroll-mt-20 md:scroll-mt-24"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-[gray-800] text-3xl md:text-4xl font-bold mb-8 text-center">
+        <h2 className="text-[gray-800] text-4xl md:text-5xl font-bold mb-8 text-center">
           IMPACTFUL STORIES
         </h2>
 
@@ -71,11 +63,15 @@ const Impact = () => {
               md:left-[10%]
             "
           >
-            <img
-              src={story.img}
-              alt="Person Story"
+            <iframe
+              src={story.video}
+              title="Impact Story Video"
               className="w-full h-full object-cover"
-            />
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+
           </div>
 
           {/* OVERLAPPING CARD */}
@@ -105,16 +101,17 @@ const Impact = () => {
 
             <p className="text-gray-600 text-sm mb-4">{story.long}</p>
 
-            <button className="text-orange-500 font-semibold flex items-center text-sm hover:text-orange-600 transition">
-              Read Full Story
+            <p className="text-orange-500 font-semibold flex items-center text-sm">
               <svg
-                className="w-4 h-4 ml-1"
+                className="w-4 h-4 mr-1"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
-                <path d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"></path>
+                <path d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"></path>
               </svg>
-            </button>
+              Watch this video
+            </p>
+
           </div>
         </div>
       </div>

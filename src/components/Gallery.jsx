@@ -1,35 +1,27 @@
 import React, { useMemo } from "react";
 
 const Gallery = () => {
-  const allImages = [
-    "images/gallery/1.jpg",
-    "images/gallery/2.jpg",
-    "images/gallery/3.avif",
-    "images/gallery/4.jpg",
-    "images/gallery/5.jpg",
-    "images/gallery/6.jpg",
-    "images/gallery/7.webp",
-    "images/gallery/8.jpeg",
-    "images/gallery/9.jpg",
-    "images/gallery/10.jpg",
-    "images/gallery/11.jpg",
-    // "images/gallery/12.jpg",
-    // "images/gallery/13.jpg",
-    // "images/gallery/14.jpg",
-    // "images/gallery/15.jpg",
-  ];
+  // Auto-import all images from gallery folder (Vite latest syntax)
+  const allImages = Object.values(
+  import.meta.glob("../assets/gallery/*.{jpg,jpeg,png,webp,avif}", {
+    eager: true,
+    query: "?url",
+    import: "default",
+  })
+);
 
-  // Generate 8 random images ONCE per page load
+
+  // Pick 8 random images ONCE per page load
   const randomImages = useMemo(() => {
     const shuffled = [...allImages].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, 8);
-  }, []);
+  }, [allImages]);
 
   return (
     <section className="bg-[#0074B5] py-16 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-white text-5xl md:text-6xl font-bold mb-10 text-center">
+        <h2 className="text-white text-4xl md:text-5xl font-bold mb-10 text-center">
           GALLERY
         </h2>
 
@@ -43,8 +35,7 @@ const Gallery = () => {
               <img
                 src={img}
                 alt={`Gallery ${index + 1}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 
-                border-2 border-white rounded-lg"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 border-2 border-white rounded-lg"
               />
             </div>
           ))}

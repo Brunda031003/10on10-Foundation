@@ -9,6 +9,7 @@ import Gallery from './components/Gallery'
 import Blogs from './components/Blogs'
 import Review from './components/Review'
 import Footer from './components/Footer'
+import Team  from './components/Team'
 
 const App = () => {
   return (
@@ -20,8 +21,9 @@ const App = () => {
       <Videos />
       <Impact />
       <Gallery />
-      <Blogs />
-      <Review />
+      {/* <Blogs /> */}
+      <Team />
+      {/* <Review /> */}
       <Footer />
     </div>
   )

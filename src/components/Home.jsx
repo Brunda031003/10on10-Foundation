@@ -5,12 +5,11 @@ const Home = () => {
 
   // List all hero images here
   const images = [
-    `${base}images/landing/1.jpg`,
+    `${base}images/landing/1.png`,
     `${base}images/landing/2.jpg`,
-    `${base}images/landing/3.jpg`,
+    `${base}images/landing/3.jpeg`,
     `${base}images/landing/4.jpg`,
     `${base}images/landing/5.jpg`,
-    `${base}images/landing/6.jpg`,
   ]
 
   // Pick a random image ONLY once per page load

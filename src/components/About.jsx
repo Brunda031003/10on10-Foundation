@@ -1,71 +1,132 @@
-import React from 'react'
+import React from "react";
 
 const About = () => {
-  const base = import.meta.env.BASE_URL || '/'
-
   return (
-    <section id="about" className="w-full bg-[#0074B5] py-16 md:py-15 px-6 scroll-mt-20 md:scroll-mt-24">
+    <section
+      id="about"
+      className="w-full bg-[#0074B5] py-16 px-6 scroll-mt-20 md:scroll-mt-24"
+    >
+      {/* Heading */}
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-white">
-            About Us
+        <h2 className="text-4xl md:text-5xl font-bold text-white">
+          ABOUT US
         </h2>
 
-        {/* Stylish underline with a dot */}
+        {/* Underline */}
         <div className="flex justify-center items-center mt-4 space-x-2">
-            {/* Line */}
-            <span className="block w-20 h-1 bg-white rounded-full"></span>
-            {/* Dot */}
-            <span className="block w-3 h-3 bg-white rounded-full"></span>
+          <span className="block w-20 h-1 bg-white rounded-full"></span>
+          <span className="block w-3 h-3 bg-white rounded-full"></span>
         </div>
-        </div>
+      </div>
 
+      {/* Content */}
+      <div className="max-w-5xl mx-auto text-white space-y-10 leading-relaxed text-justify align-center">
 
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
-
-        {/* Left - Image */}
-        <div className="md:w-[330px] w-full flex justify-center order-1 md:order-1">
-          <img
-            src={`${base}images/Founder.jpg`}
-            alt="About Us"
-            className="rounded-xl shadow-2xl w-full max-w-xs md:max-w-sm object-cover"
-          />
-        </div>
-
-        {/* Right - Text */}
-        <div className="md:w-1/2 w-full text-white flex flex-col order-2 md:order-2">
-          <p className="text-lg md:text-xl mb-4 leading-relaxed">
-           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        {/* Who We Are */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-4">Who We Are</h3>
+          <p className="mb-4">
+            At <strong>10on10</strong>, we’re people first — people who have walked different paths,
+            faced our own challenges, and learned how powerful inner change can be.
+            We come from diverse backgrounds across India, but we’re united by one
+            shared purpose:
           </p>
 
-          <p className="text-lg md:text-xl mb-4 leading-relaxed">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <p className="font-bold mb-4">
+            To nurture a generation of people who are Resourceful, Responsible, and
+            Resilient — people who believe in themselves, aim high, pursue
+            excellence, and contribute meaningfully to the world.
           </p>
 
-          <p className="text-lg md:text-xl mb-6 leading-relaxed">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          <p>
+            We work closely with students, young adults, parents, educators, and
+            institutions, creating experiences that help real change happen —
+            from within.
+          </p>
+        </div>
+
+        {/* Vision */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
+          <p className="mb-4">We imagine a world where young people grow into adults who:</p>
+          <ul className="list-disc list-inside space-y-2 mb-4">
+            <li>Think and act <strong>resourcefully</strong></li>
+            <li>Take <strong>responsibility</strong> for their choices and their impact</li>
+            <li>Face life’s challenges with <strong>resilience</strong></li>
+          </ul>
+          <p>
+            To turn this vision into reality, we’ve committed ourselves to empowering
+            <strong>10 million young people over the next 10 years</strong> — helping them grow not
+            just academically or professionally, but emotionally and mentally as well.
+          </p>
+        </div>
+
+        {/* What We Do */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-4">What We Do</h3>
+          <p className="mb-4">
+            The <strong>10on10 Foundation</strong> conducts <strong>one-day Personal Transformation Workshops</strong> for:
+          </p>
+          <ul className="list-disc list-inside space-y-2 mb-4">
+            <li><strong>Students (12–21 years)</strong></li>
+            <li><strong>Adults (21+ years)</strong></li>
+          </ul>
+          <p className="mb-4">
+            These aren’t typical workshops. They are <strong>highly interactive,
+            activity-based experiences</strong> that work at a deeper level — helping
+            participants understand why they think, feel, and act the way they do,
+            and how to change what no longer serves them.
+          </p>
+        </div>
+
+        {/* Our Approach */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-4">Our Approach</h3>
+          <p className="font-semibold mb-4">
+            At the heart of 10on10 is a simple belief: <strong>People are not broken — they
+            are conditioned.</strong>
           </p>
 
-          {/* Buttons */}
-          <div className="flex flex-wrap gap-4 mt-4">
-            <a
-              href="#program"
-              className="bg-white text-[#0074B5] font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-[#0074B5] hover:text-[white] transition"
-            >
-              Explore Programs
-            </a>
+          <p className="mb-4">
+            Every one of us carries immense, often untapped potential — the ability to think clearly, act
+            confidently, and live with purpose. As we grow up, we each create our own inner <strong>“map of the world”</strong>shaped by our experiences, environment, and the beliefs we form about ourselves.      
+          </p>
+          <p className="font-semibold mb-4">
+            This map quietly guides our thoughts, emotions, and actions. Sometimes it helps us move forward. At other times, it holds us back.
+          </p>
+          
+          <p className="mb-4">
+            <strong>At 10on10</strong>, we help people revisit this inner map —<strong>reshape it</strong> so it becomes a source of strength rather than limitation.
+            
+          </p>
+          
+        </div>
 
-            <a
-              href="#impact"
-              className="border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-[#0074B5] transition"
-            >
-              See Our Impact
-            </a>
-          </div>
+        {/* Experience */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-4">The 10on10 Experience</h3>
+          <p className="mb-4">
+            Our programs are <strong>joyful, reflective, and deeply practical</strong> — filled
+            with games, insights, laughter, and moments of self-discovery that
+            stay with participants long after the day ends.
+          </p>
+
+          <p className="mb-4 font-semibold">
+            At 10on10, we don’t just teach skills — <strong>we help people upgrade their
+            inner operating system.</strong>
+          </p>
+          <p className="mb-4">
+            Because when your inner compass is aligned, confusion gives way to clarity, fear makes space for confidence, and growth begins to feel natural.
+          </p>
+
+          <p className="text-lg font-semibold text-center">
+            ✨ The direction is within. It’s time to follow it. ✨
+          </p>
         </div>
 
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;
