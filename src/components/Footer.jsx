@@ -43,9 +43,26 @@ export default function Footer() {
       </div>
 
       {/* Optional: Small Copyright */}
-      <div className="mt-6 text-center text-white/70 text-sm">
-        &copy; {new Date().getFullYear()}  All rights reserved.
-      </div>
+      <div className="mt-6 text-center text-white/70 text-sm flex flex-col md:flex-row justify-center items-center gap-1 md:gap-2">
+      <span>
+        &copy; {new Date().getFullYear()} 10on10 Foundation. All rights reserved.
+      </span>
+
+      <span className="hidden md:inline">|</span>
+
+      <span>
+        Designed & Developed by{" "}
+        <a
+          href="https://www.instagram.com/firstecho.in?igsh=MmRoNDB4Z2R2aGU="
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium text-white/80 hover:text-white underline underline-offset-2"
+        >
+          First Echo
+        </a>
+      </span>
+    </div>
+
     </footer>
   );
 }
