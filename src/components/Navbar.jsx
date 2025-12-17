@@ -97,8 +97,8 @@ const Navbar = () => {
           <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')} className={linkClass('about')}>About</a></li>
           <li><a href="#program" onClick={(e) => handleNavClick(e, 'program')} className={linkClass('program')}>Program</a></li>
           <li><a href="#impact" onClick={(e) => handleNavClick(e, 'impact')} className={linkClass('impact')}>Impact</a></li>
-          <li><a href="#blog" onClick={(e) => handleNavClick(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
-          <li><a href="#review" onClick={(e) => handleNavClick(e, 'review')} className={linkClass('review')}>Review</a></li>
+          {/* <li><a href="#blog" onClick={(e) => handleNavClick(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
+          <li><a href="#review" onClick={(e) => handleNavClick(e, 'review')} className={linkClass('review')}>Review</a></li> */}
         </ul>
 
         {/* Mobile Hamburger */}
@@ -124,8 +124,8 @@ const Navbar = () => {
           <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')} className={linkClass('about')}>About</a></li>
           <li><a href="#program" onClick={(e) => handleNavClick(e, 'program')} className={linkClass('program')}>Program</a></li>
           <li><a href="#impact" onClick={(e) => handleNavClick(e, 'impact')} className={linkClass('impact')}>Impact</a></li>
-          <li><a href="#blog" onClick={(e) => handleNavClick(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
-          <li><a href="#review" onClick={(e) => handleNavClick(e, 'review')} className={linkClass('review')}>Review</a></li>
+          {/* <li><a href="#blog" onClick={(e) => handleNavClick(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
+          <li><a href="#review" onClick={(e) => handleNavClick(e, 'review')} className={linkClass('review')}>Review</a></li> */}
         </ul>
       )}
     </nav>
