@@ -11,7 +11,13 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
+
+      // ✅ Force Home active when at top (important for mobile)
+      if (window.scrollY < 50) {
+        setActive('home')
+      }
     }
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -32,32 +38,47 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', setNavHeight)
   }, [])
 
-  /* ---------------- Active link observer ---------------- */
+  /* ---------------- Active link observer (FIXED) ---------------- */
   useEffect(() => {
-    const ids = ['home', 'about', 'impact', 'experience', 'footer']
+  let hasScrolled = false
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id)
-          }
-        })
-      },
-      {
-        root: null,
-        rootMargin: '0px 0px -40% 0px',
-        threshold: 0
-      }
-    )
+  const ids = ['home', 'about', 'impact', 'experience', 'footer']
 
-    ids.forEach((id) => {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
-    })
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (!hasScrolled) return   // 🚫 block initial false triggers
 
-    return () => observer.disconnect()
-  }, [])
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id)
+        }
+      })
+    },
+    {
+      root: null,
+      rootMargin: '-50% 0px -40% 0px',
+      threshold: 0
+    }
+  )
+
+  ids.forEach((id) => {
+    const el = document.getElementById(id)
+    if (el) observer.observe(el)
+  })
+
+  const enableObserver = () => {
+    hasScrolled = true
+    window.removeEventListener('scroll', enableObserver)
+  }
+
+  window.addEventListener('scroll', enableObserver)
+
+  return () => {
+    observer.disconnect()
+    window.removeEventListener('scroll', enableObserver)
+  }
+}, [])
+
 
   /* ---------------- Smooth scroll handler ---------------- */
   const handleNavClick = (e, id) => {
@@ -71,6 +92,7 @@ const Navbar = () => {
     const top = el.getBoundingClientRect().top + window.scrollY - navHeight
 
     window.scrollTo({ top, behavior: 'smooth' })
+    setActive(id)
     setIsOpen(false)
   }
 
@@ -99,6 +121,7 @@ const Navbar = () => {
       const top = el.getBoundingClientRect().top + window.scrollY - navHeight
 
       window.scrollTo({ top, behavior: 'smooth' })
+      setActive(id)
       setIsOpen(false)
     }
 
@@ -114,9 +137,8 @@ const Navbar = () => {
       `}
     >
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-
         {/* Logo */}
-        <a href="/" className="flex items-center">
+        <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center">
           <img
             src={`${import.meta.env.BASE_URL || '/'}images/Logo.png`}
             alt="Logo"
