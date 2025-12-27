@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full bg-[#0074B5] py-16 px-6 scroll-mt-20 md:scroll-mt-24"
+      className="w-full bg-[#1b81bc] py-16 px-6 scroll-mt-20 md:scroll-mt-24"
     >
       {/* Heading */}
       <div className="max-w-6xl mx-auto text-center mb-12">
@@ -76,51 +76,6 @@ const About = () => {
             activity-based experiences</strong> that work at a deeper level — helping
             participants understand why they think, feel, and act the way they do,
             and how to change what no longer serves them.
-          </p>
-        </div>
-
-        {/* Our Approach */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-4">Our Approach</h3>
-          <p className="font-semibold mb-4">
-            At the heart of 10on10 is a simple belief: <strong>People are not broken — they
-            are conditioned.</strong>
-          </p>
-
-          <p className="mb-4">
-            Every one of us carries immense, often untapped potential — the ability to think clearly, act
-            confidently, and live with purpose. As we grow up, we each create our own inner <strong>“map of the world”</strong>shaped by our experiences, environment, and the beliefs we form about ourselves.      
-          </p>
-          <p className="font-semibold mb-4">
-            This map quietly guides our thoughts, emotions, and actions. Sometimes it helps us move forward. At other times, it holds us back.
-          </p>
-          
-          <p className="mb-4">
-            <strong>At 10on10</strong>, we help people revisit this inner map —<strong>reshape it</strong> so it becomes a source of strength rather than limitation.
-            
-          </p>
-          
-        </div>
-
-        {/* Experience */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-4">The 10on10 Experience</h3>
-          <p className="mb-4">
-            Our programs are <strong>joyful, reflective, and deeply practical</strong> — filled
-            with games, insights, laughter, and moments of self-discovery that
-            stay with participants long after the day ends.
-          </p>
-
-          <p className="mb-4 font-semibold">
-            At 10on10, we don’t just teach skills — <strong>we help people upgrade their
-            inner operating system.</strong>
-          </p>
-          <p className="mb-4">
-            Because when your inner compass is aligned, confusion gives way to clarity, fear makes space for confidence, and growth begins to feel natural.
-          </p>
-
-          <p className="text-lg font-semibold text-center">
-            ✨ The direction is within. It’s time to follow it. ✨
           </p>
         </div>
 

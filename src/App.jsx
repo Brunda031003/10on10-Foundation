@@ -10,6 +10,7 @@ import Blogs from './components/Blogs'
 import Review from './components/Review'
 import Footer from './components/Footer'
 import Team  from './components/Team'
+import Experience from './components/Experience'
 
 const App = () => {
   return (
@@ -17,12 +18,20 @@ const App = () => {
       <Navbar />
       <Home />
       <About />
-      <Programs />
-      <Videos />
       <Impact />
+      <Programs />
+      <Experience />
+      <Videos />
       <Gallery />
-      {/* <Blogs /> */}
+      
       <Team />
+      
+      
+      
+      
+      
+      {/* <Blogs /> */}
+      
       {/* <Review /> */}
       <Footer />
     </div>

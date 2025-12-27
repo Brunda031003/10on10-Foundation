@@ -2,7 +2,7 @@ import { FaYoutube, FaInstagram, FaEnvelope } from "react-icons/fa"; // using re
 
 export default function Footer() {
   return (
-    <footer className="w-full py-8" style={{ backgroundColor: "#09487D" }}>
+    <footer id="footer" className="w-full py-8" style={{ backgroundColor: "#09487D" }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 gap-6">
         
         {/* Left Side - Contact Info */}

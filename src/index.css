@@ -4,3 +4,57 @@
 html {
 	scroll-behavior: smooth;
 }
+
+/* Site fonts: use Montserrat for the whole site by default */
+body {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+}
+
+/* Utility / example font classes */
+.montserrat-regular {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.montserrat-700 {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.bitcount-prop-single-default {
+	font-family: "Bitcount Prop Single", system-ui;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+		"slnt" 0,
+		"CRSV" 0.5,
+		"ELSH" 0,
+		"ELXP" 0;
+}
+
+.climate-crisis-default {
+	font-family: "Climate Crisis", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: "YEAR" 1979;
+}
+
+.permanent-marker-regular {
+	font-family: "Permanent Marker", cursive;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.league-spartan-regular {
+	font-family: "League Spartan", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}

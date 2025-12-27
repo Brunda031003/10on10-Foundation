@@ -1,81 +1,104 @@
 import React, { useEffect, useState } from "react";
 
 const Videos = () => {
-  const [videos, setVideos] = useState([]);
+  const [studentVideos, setStudentVideos] = useState([]);
+  const [adultVideos, setAdultVideos] = useState([]);
 
-  const base = import.meta.env.BASE_URL || '/'
+  const base = import.meta.env.BASE_URL || "/";
 
-  // Function to load and parse a TXT file
+  // Load & parse TXT file
   const loadTxtFile = async (path) => {
-  try {
-    const res = await fetch(path)
-    if (!res.ok) {
-      console.warn("Missing file:", path)
-      return []
+    try {
+      const res = await fetch(path);
+      if (!res.ok) {
+        console.warn("Missing file:", path);
+        return [];
+      }
+
+      const text = await res.text();
+      return text
+        .trim()
+        .split("\n")
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0 && line.includes("|"))
+        .map((line) => {
+          const [title, link] = line.split("|").map((x) => x.trim());
+          return { title, link };
+        });
+    } catch (err) {
+      console.error("Failed loading", path, err);
+      return [];
     }
+  };
 
-    const text = await res.text()
-    return text
-  .trim()
-  .split("\n")
-  .map((line) => line.trim())
-  .filter((line) => line.length > 0 && line.includes("|"))   // ★ removes empty lines
-  .map((line) => {
-    const [title, link] = line.split("|").map((x) => x.trim())
-    return { title, link }
-  })
+  // Pick N random items
+  const pickRandom = (arr, count) => {
+    const shuffled = [...arr].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+  };
 
-  } catch (err) {
-    console.error("Failed loading", path, err)
-    return []
-  }
-}
+  useEffect(() => {
+    const fetchVideos = async () => {
+      const students = await loadTxtFile(
+        `${base}videos/stories_of_transformation_students.txt`
+      );
+      const adults = await loadTxtFile(
+        `${base}videos/stories_of_transformation_adults.txt`
+      );
 
-
-  const getRandom = (arr) =>
-    arr[Math.floor(Math.random() * arr.length)];
-
-    useEffect(() => {
-      const fetchVideos = async () => {
-      const eventOverview = await loadTxtFile(`${base}videos/event_overview.txt`)
-      const interviews = await loadTxtFile(`${base}videos/interviews.txt`)
-      const whatChanged = await loadTxtFile(`${base}videos/what_changed.txt`)
-
-
-
-      const picks = [getRandom(eventOverview), getRandom(interviews), getRandom(whatChanged)].filter(Boolean)
-      console.log('Videos loaded:', { eventOverviewLength: eventOverview.length, interviewsLength: interviews.length, whatChangedLength: whatChanged.length, picks })
-      setVideos(picks)
-    }
+      setStudentVideos(pickRandom(students, 3));
+      setAdultVideos(pickRandom(adults, 3));
+    };
 
     fetchVideos();
   }, []);
 
   return (
-    <section className="w-full py-16 px-6" style={{ backgroundColor: "white" }}>
+    <section className="w-full py-16 px-6 bg-white">
       {/* Title */}
       <div className="max-w-7xl mx-auto text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-[#0074B5] mb-4">
-          OUR VIDEOS
+          Stories Of Transformation
         </h2>
         <p className="text-black text-lg md:text-xl max-w-2xl mx-auto">
           Explore our latest activities, impact stories, and inspirational moments.
         </p>
       </div>
 
-      {/* 3 Random Videos */}
-      <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-        {videos.map((v, i) => (
-          <div key={i} className="bg-[#0074B5] rounded-xl p-0 shadow-xl">
-            <div className="relative w-full h-0 pb-[56.25%]">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-lg"
-                src={v.link}
-                allowFullScreen
-              ></iframe>
+      {/* STUDENTS ROW */}
+      <div className="max-w-7xl mx-auto mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {studentVideos.map((v, i) => (
+            <div key={`student-${i}`} className="bg-[#0074B5] rounded-xl shadow-xl">
+              <div className="relative w-full h-0 pb-[56.25%]">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-xl"
+                  src={v.link}
+                  title={v.title}
+                  allowFullScreen
+                />
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+      </div>
+
+      {/* ADULTS ROW */}
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {adultVideos.map((v, i) => (
+            <div key={`adult-${i}`} className="bg-[#0074B5] rounded-xl shadow-xl">
+              <div className="relative w-full h-0 pb-[56.25%]">
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-xl"
+                  src={v.link}
+                  title={v.title}
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

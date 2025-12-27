@@ -61,7 +61,7 @@ const Team = () => {
   return (
     <section
       className="w-full py-16 px-4"
-      style={{ backgroundColor: "#FF9933" }}
+      style={{ backgroundColor: "#fea248" }}
     >
       {/* Heading */}
       <div className="max-w-7xl mx-auto text-center mb-12">
