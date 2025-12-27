@@ -132,10 +132,10 @@ const Programs = () => {
 
       {/* Blue Section */}
       <section className="w-full bg-[#1b81bc] py-16 md:py-20 px-4 md:px-6 mt-16">
-        <div className="max-w-5xl mx-auto text-white text-left md:text-center space-y-10">
+        <div className="max-w-5xl mx-auto text-white text-left md:text-left space-y-10">
 
           <div className="space-y-4">
-            <h2 className="text-1xl md:text-2xl font-semibold md:text-center">Our Approach</h2>
+            <h2 className="text-1xl md:text-2xl font-semibold md:text-left">Our Approach</h2>
 
             <p className="text-sm md:text-base leading-relaxed opacity-95">
               <strong>
@@ -159,7 +159,7 @@ const Programs = () => {
           </div>
 
           <div className="space-y-4 pt-6">
-            <h2 className="text-2xl md:text-3xl font-semibold md:text-center">The 10on10 Experience</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold md:text-left">The 10on10 Experience</h2>
 
             <p className="text-sm md:text-base leading-relaxed opacity-95">
               Our programs are <strong>joyful, reflective, and deeply practical</strong>.
