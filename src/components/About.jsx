@@ -55,9 +55,7 @@ const About = () => {
             <li>Face life’s challenges with <strong>resilience</strong></li>
           </ul>
           <p>
-            To turn this vision into reality, we’ve committed ourselves to empowering
-            <strong>10 million young people over the next 10 years</strong> — helping them grow not
-            just academically or professionally, but emotionally and mentally as well.
+            To turn this vision into reality, we’ve committed ourselves to empowering<strong> 10 million young people over the next 10 years</strong> — helping them grow not just academically or professionally, but emotionally and mentally as well.
           </p>
         </div>
 
