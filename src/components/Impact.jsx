@@ -51,12 +51,7 @@ const Impact = () => {
       short:"From a quiet, anxious student to a confident thinker 🌱✨",
       long:"She grew in creativity, independence, and self-belief—rising to second rank in SSD. Her parents see the change too, in the way she speaks, thinks, and shares thoughtful advice. More than marks, it’s a journey of confidence and finding her voice 💖📚",
     },
-    {
-      video: "https://www.youtube.com/embed/I43kdktRG9g",
-      title: "Communicate Fluently!",
-      short:"From self-doubt to <strong>confidence, creativity, and independence</strong> ✨A quiet girl who avoided eye contact and felt the pressure of exams, becomes a confident young student who thinks out of the box and believes in herself 🌱✨",
-      long:"She’s more creative, more independent, spending joyful time with friends, and most importantly—learning on her own. Once struggling with low scores, she’s now climbed all the way to second rank in SSD, a breakthrough that changed everything. Her parents see the difference too—in the way she speaks, processes thoughts, and even offers thoughtful advice that leaves them amazed. This journey isn’t just about marks, it’s about confidence, courage, and discovering her own voice. A transformation that makes everyone proud 💖📚 ",
-    },
+    
   ];
   const stories2 = [
     {
