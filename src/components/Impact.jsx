@@ -6,7 +6,7 @@ const Impact = () => {
       video: "https://www.youtube.com/embed/a7BQwgU-GVY?controls=0&rel=0",
       title: "Talk to Anyone Anytime! ",
       short:
-        "🌍✨ From hiding behind books to stepping into the spotlight! 💫He’s gone from quietly staying in the background to voluntarily signing up to participate — and that confidence speaks volumes. 🎤💪",
+        "🌍✨ From hiding behind books to stepping into the spotlight!💫 He’s gone from quietly staying in the background to voluntarily signing up to participate — and that confidence speaks volumes. 🎤💪",
       long:
         "What changed? A shift in mindset, a willingness to see himself differently, and the courage to try something new. 💭💡Every new perspective has added a fresh color to his story — and it’s been such a joy watching him open up, explore, and shine. 🎨🌈 Because when you start believing in yourself, the world starts seeing you differently too. 💙✨"
     },
@@ -15,7 +15,7 @@ const Impact = () => {
       title: "Discover New Perspectives",
       short:  "Once nervous to talk to strangers, now she volunteers to teach them 🌱💪",
       long:
-        "A new experience sparked confidence—at school, at home, and within herself.She opens up to her parents, builds deeper bonds, and has become the friend others trust to listen.Growth isn’t just speaking up, it’s seeing yourself and others differently ✨💛",
+        "A new experience sparked confidence—at school, at home, and within herself. She opens up to her parents, builds deeper bonds, and has become the friend others trust to listen. Growth isn’t just speaking up, it’s seeing yourself and others differently ✨💛",
     },
     {
       video: "https://www.youtube.com/embed/FbxjPJoiZnU?controls=0&rel=0",
@@ -23,7 +23,7 @@ const Impact = () => {
       short:
         "From hesitation to confident, clear speech 💬💪",
       long:
-        "It was never about perfection, but finding his voice and using it fearlessly.One conversation and one brave word at a time, he keeps growing—and it’s inspiring to watch 🌱❤️",
+        "It was never about perfection, but finding his voice and using it fearlessly. One conversation and one brave word at a time, he keeps growing—and it’s inspiring to watch 🌱❤️",
     },
     {
       video: "https://www.youtube.com/embed/UxXmrYwJIL8",
@@ -31,13 +31,13 @@ const Impact = () => {
       short:
         "From exam stress to inner calm — what a transformation! 🌟📚He’s learned to pause, breathe, and face challenges with a clear mind and steady heart. 💆‍♂️💫",
       long:
-        "Today, he’s not just studying better — he’s thinking calmer, managing his emotions, and scoring higher. Because being calm isn’t about doing less — it’s about doing everything with peace, patience, and purpose. ✨So proud of his journey — proof that true growth begins when you learn to lead your mind before it leads you. 🌱",
+        "Today, he’s not just studying better — he’s thinking calmer, managing his emotions, and scoring higher. Because being calm isn’t about doing less — it’s about doing everything with peace, patience, and purpose.✨ So proud of his journey — proof that true growth begins when you learn to lead your mind before it leads you. 🌱",
     },
     {
       video: "https://www.youtube.com/embed/KtCjrblMI_s",
       title: "Know Yourself!",
       short:"Progress in Every Hour 🌱📚",
-      long:"From quiet days at home and nervous class presentations to focused study sessions and growing confidence 🌱✨She’s learning how to use her time better, stay focused for longer, and keep going even with distractions around. Progress isn’t about perfection—it’s about consistency, effort, and believing you can improve. And she’s doing exactly that, one confident hour at a time 📚💖",
+      long:"From quiet days at home and nervous class presentations to focused study sessions and growing confidence.🌱✨ She’s learning how to use her time better, stay focused for longer, and keep going even with distractions around. Progress isn’t about perfection—it’s about consistency, effort, and believing you can improve. And she’s doing exactly that, one confident hour at a time 📚💖",
     },
     {
       video: "https://www.youtube.com/embed/wzCW9VO-X5I",
@@ -73,7 +73,7 @@ const Impact = () => {
       short:
         "There was a time when she was scared to talk to strangers, always procrastinating, always holding back. Speaking up didn’t come easy.",
       long:
-        "Today, she volunteers in NCC to teach her juniors—and does it with pride 💪 Watching them learn because of her makes her feel confident and accomplished.She’s more open with her parents now, sharing thoughts she once kept to herself 💛 And among her friends, she’s become the one they turn to—the listener, the trustworthy shoulder.Growth isn’t just about speaking louder. It’s about standing taller. 🌱",
+        "Today, she volunteers in NCC to teach her juniors—and does it with pride 💪 Watching them learn because of her makes her feel confident and accomplished. She’s more open with her parents now, sharing thoughts she once kept to herself 💛 And among her friends, she’s become the one they turn to—the listener, the trustworthy shoulder.Growth isn’t just about speaking louder. It’s about standing taller. 🌱",
     },
     {
       video: "https://www.youtube.com/embed/FbxjPJoiZnU?controls=0&rel=0",
@@ -81,7 +81,7 @@ const Impact = () => {
       short:
         "He was once short-tempered, shy, and quiet—rarely speaking to anyone and struggling in certain subjects. Confidence felt far away, and communicating fluently seemed impossible.",
       long:
-        "Now, look at the change! ✨He’s calmer, kinder, and more confident. He doesn’t give up anymore. He concentrates better in class, understands concepts clearly, and talks more openly with others.The biggest win? The subjects he once found difficult are now his strengths 📚💪",
+        "Now, look at the change! ✨He’s calmer, kinder, and more confident. He doesn’t give up anymore. He concentrates better in class, understands concepts clearly, and talks more openly with others. The biggest win? The subjects he once found difficult are now his strengths 📚💪",
     }
   ];
 

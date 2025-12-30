@@ -77,7 +77,7 @@ const Programs = () => {
           <div className="px-2 py-6 md:px-8 md:py-8 text-justify">
 
             <p className="text-gray-700 text-sm md:text-base mb-4 max-w-4xl mx-auto">
-              The 10on10 Foundation organises <strong>1-day Personal Transformation</strong> workshops for <strong>Adults (21+)</strong> 
+              The 10on10 Foundation organises <strong>1-day Personal Transformation</strong> workshops for <strong> Adults (21+) </strong> 
               and <strong>Students (12-21)</strong>.
             </p>
             
@@ -94,7 +94,7 @@ const Programs = () => {
             </p>
 
             <p className="text-gray-700 text-sm md:text-base mb-4 max-w-4xl mx-auto">
-              Instead of dwelling on past problems or labels, the 10on10© Approach helps participants:
+              Instead of dwelling on past problems or labels, the 10on10 Approach helps participants:
             </p>
 
             <ul className="list-disc list-inside text-gray-700 text-sm md:text-base mb-4 max-w-4xl mx-auto">
