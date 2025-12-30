@@ -135,26 +135,26 @@ const Programs = () => {
         <div className="max-w-5xl mx-auto text-white text-left md:text-left space-y-10">
 
           <div className="space-y-4">
-            <h2 className="text-1xl md:text-2xl font-semibold md:text-left">Our Approach</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold md:text-left">Our Approach</h2>
 
             <p className="text-sm md:text-base leading-relaxed opacity-95">
-              <strong>
-                At the heart of 10on10 is a simple belief: People are not broken — they are conditioned.
+              
+                At the heart of 10on10 is a simple belief:<strong> People are not broken — they are conditioned.
               </strong>
             </p>
 
             <p className="text-sm md:text-base leading-relaxed opacity-95">
-              Every one of us carries immense, often untapped potential — the ability to think clearly, act confidently, and live with purpose.
+              Every one of us carries immense, often untapped potential — the ability to think clearly, act confidently, and live with purpose. As we grow up, we each create our own inner <strong>"map of the world"</strong> shaped by our experiences, environment, and the beliefs we form about ourselves.
             </p>
 
             <p className="text-sm md:text-base leading-relaxed opacity-95">
-              This map quietly guides our thoughts, emotions, and actions. Sometimes it helps us move forward. At other times, it holds us back.
+              <strong>This map quietly guides our thoughts, emotions, and actions. Sometimes it helps us move forward. At other times, it holds us back.</strong>
             </p>
 
             <p className="text-sm md:text-base leading-relaxed opacity-95">
               <strong>
-                At 10on10, we help people revisit this inner map — reshape it so it becomes a source of strength rather than limitation.
-              </strong>
+                At 10on10,</strong> we help people revisit this inner map —<strong>reshape it</strong> so it becomes a source of strength rather than limitation.
+              
             </p>
           </div>
 
@@ -162,17 +162,16 @@ const Programs = () => {
             <h2 className="text-2xl md:text-3xl font-semibold md:text-left">The 10on10 Experience</h2>
 
             <p className="text-sm md:text-base leading-relaxed opacity-95">
-              Our programs are <strong>joyful, reflective, and deeply practical</strong>.
+              Our programs are <strong>joyful, reflective, and deeply practical</strong>— filled with games, insights, laughter, and moments of self-discovery that stay with participants long after the day ends.
             </p>
 
-            <p className="text-sm md:text-base leading-relaxed opacity-95">
-              <strong>
-                At 10on10, we don’t just teach skills — we help people upgrade their inner operating system.
+            <p className="text-sm md:text-base leading-relaxed opacity-95">             
+                At 10on10, we don’t just teach skills <strong> — we help people upgrade their inner operating system.
               </strong>
             </p>
 
             <p className="text-sm md:text-base leading-relaxed opacity-95">
-              Because when your inner compass is aligned, confusion gives way to clarity.
+              Because when your inner compass is aligned, confusion gives way to clarity, fear makes space for confidence, and growth begins to feel natural.
             </p>
           </div>
 
