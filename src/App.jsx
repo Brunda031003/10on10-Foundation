@@ -28,10 +28,9 @@ const App = () => {
       
       
       
-      
-      
-      {/* <Blogs /> */}
-      
+
+
+      <Blogs />
       {/* <Review /> */}
       <Footer />
     </div>
