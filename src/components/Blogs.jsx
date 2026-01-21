@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 const Blogs = () => {
   const blogs = [
     {
-      title: "Are you man enough ? Take a drag!",
+      title: "Are you man enough? Take a drag!",
       img: "images/Blogs/Addictions.png",
       intro: `
 I remember smoking my very first cigarette in the 2nd year of University. There was no looking back thereafter. It took me decades to realize and start working on shaking off that habit. I cannot testimate what all aspects of my life did this habit impact adversely. Peer pressure is where it all started. Little did I know then. Much older now, and hopefully just a little bit wiser, here is what I have learned.
@@ -948,26 +948,26 @@ Why struggle on your own? Experience change in a day. Email us at info@10on10.or
   return (
     <section
       id="blog"
-      className="bg-white py-16 px-4 md:px-10 max-w-7xl mx-auto"
+      className="bg-white py-10 md:py-16 px-4 md:px-10 max-w-7xl mx-auto"
     >
-      <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+      <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 md:mb-12">
         BLOG OF THE DAY
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-[460px_1fr] gap-10 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-[460px_1fr] gap-6 md:gap-10 items-stretch">
 
         {/* IMAGE */}
         <div className="flex justify-center md:justify-start">
           <img
             src={blog.img}
             alt={blog.title}
-            className="max-w-full h-[460px] object-contain rounded-lg"
+            className="max-w-full h-[280px] md:h-[460px] object-contain rounded-lg"
           />
         </div>
 
         
         {/* TEXT */}
-        <div className="h-[460px] overflow-y-auto pr-4">
+        <div className="h-[300px] md:h-[460px] overflow-y-auto pr-4">
 <div>
 
   <h3 className="text-3xl font-bold mb-4 text-black">
