@@ -174,7 +174,7 @@ Why struggle on your own? Experience change in a day. Email us at info@10on10.or
 },
 
 {
-  title: "That Was My Name",
+  title: "Rotten-toothed Grandma!",
   img: "images/Blogs/Rotten Toothed Grandma.png",
 
   intro: `
@@ -302,7 +302,7 @@ Why struggle on your own? Experience change in a day. Email us at info@10on10.or
 `},
 
 {
-    title: "Should I say Hello first ?",
+    title: "Should I say Hello <i>first?</i>",
     img: "images/Blogs/Anxiety.png",
     intro: `
     I have always had a limited circle of friends. Until recently. Not that I was not social, or unable to strike up a conversation, just that I would not make the first move to break the ice. I would stick to familiar faces and avoid strangers. I was wary. ‘What if I did not know much about the topic?’...’Iwill have to say I don’t know.....and they would not think much of me...’ was the usual train of chatter within.
@@ -631,7 +631,7 @@ Why struggle on your own? Experience change in a day. Email us at info@10on10.or
 },
 
 {
-  title: "Dear Teenagers",
+  title: "Dear Teenager",
   img: "images/Blogs/Dear Child.png",
   intro: `
 
@@ -941,7 +941,7 @@ Why struggle on your own? Experience change in a day. Email us at info@10on10.or
       className="bg-white py-10 md:py-16 px-4 md:px-10 max-w-7xl mx-auto"
     >
       <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 md:mb-12">
-        BLOG OF THE DAY
+        BLOG
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-[460px_1fr] gap-6 md:gap-10 items-stretch">
@@ -960,9 +960,11 @@ Why struggle on your own? Experience change in a day. Email us at info@10on10.or
         <div className="h-[300px] md:h-[460px] overflow-y-auto pr-4">
 <div>
 
-  <h3 className="text-3xl font-bold mb-4 text-black">
-    {blog.title}
-  </h3>
+  <h3
+  className="text-3xl font-bold mb-4 text-black [&_i]:italic"
+  dangerouslySetInnerHTML={{ __html: blog.title }}
+/>
+
 
   {/* INTRO */}
   <div className="italic text-gray-700 leading-relaxed mb-4">
