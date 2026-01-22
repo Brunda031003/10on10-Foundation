@@ -930,20 +930,10 @@ Why struggle on your own? Experience change in a day. Email us at info@10on10.or
   ];
 
   // BLOG OF THE DAY LOGIC
-    const START_DATE = new Date("2026-01-21"); // Day 0
-
-  const blog = useMemo(() => {
-    const today = new Date();
-
-    const daysSinceStart = Math.floor(
-      (today - START_DATE) / (1000 * 60 * 60 * 24)
-    );
-
-    const index =
-      ((daysSinceStart % blogs.length) + blogs.length) % blogs.length;
-
-    return blogs[index];
-  }, []);
+    const blog = useMemo(() => {
+  const index = Math.floor(Math.random() * blogs.length);
+  return blogs[index];
+}, []);
 
   return (
     <section
