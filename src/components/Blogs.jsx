@@ -4,7 +4,7 @@ const Blogs = () => {
   const blogs = [
     {
       title: "Are you man enough? Take a drag!",
-      img: "images/Blogs/Addictions.png",
+      img: "images/Blogs/Peer Pressure.png",
       intro: `
 I remember smoking my very first cigarette in the 2nd year of University. There was no looking back thereafter. It took me decades to realize and start working on shaking off that habit. I cannot testimate what all aspects of my life did this habit impact adversely. Peer pressure is where it all started. Little did I know then. Much older now, and hopefully just a little bit wiser, here is what I have learned.
       `,
