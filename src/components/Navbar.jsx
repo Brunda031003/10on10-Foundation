@@ -42,7 +42,7 @@ const Navbar = () => {
   useEffect(() => {
   let hasScrolled = false
 
-  const ids = ['home', 'about', 'impact', 'experience', 'blog','footer']
+  const ids = ['home', 'about', 'impact', 'experience', 'blog', 'contact']
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -153,7 +153,7 @@ const Navbar = () => {
           <li><a href="#impact" onClick={(e) => handleNavClick(e, 'impact')} className={linkClass('impact')}>Stories of Success</a></li>
           <li><a href="#experience" onClick={(e) => handleNavClick(e, 'experience')} className={linkClass('experience')}>10on10 Experience</a></li>
           <li><a href="#blog" onClick={(e) => handleNavClick(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
-          <li><a href="#footer" onClick={(e) => handleNavClick(e, 'footer')} className={linkClass('footer')}>Contact Us</a></li>
+          <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className={linkClass('contact')}>Contact Us</a></li>
         </ul>
 
         {/* Mobile Hamburger */}
@@ -181,7 +181,7 @@ const Navbar = () => {
           <li><a href="#impact" onClick={(e) => handleNavClick(e, 'impact')} className={linkClass('impact')}>Stories of Success</a></li>
           <li><a href="#experience" onClick={(e) => handleNavClick(e, 'experience')} className={linkClass('experience')}>10on10 Experience</a></li>
           <li><a href="#blog" onClick={(e) => handleNavClick(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
-          <li><a href="#footer" onClick={(e) => handleNavClick(e, 'footer')} className={linkClass('footer')}>Contact Us</a></li>
+          <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className={linkClass('contact')}>Contact Us</a></li>
         </ul>
       )}
     </nav>

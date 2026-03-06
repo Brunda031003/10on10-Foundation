@@ -11,6 +11,7 @@ import Review from './components/Review'
 import Footer from './components/Footer'
 import Team  from './components/Team'
 import Experience from './components/Experience'
+import ContactUs from "./components/ContactUs";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
 
       <Blogs />
       {/* <Review /> */}
+      <ContactUs />
       <Footer />
     </div>
   )

@@ -7,7 +7,7 @@ export default function Footer() {
         
         {/* Left Side - Contact Info */}
         <div className="flex flex-col md:flex-row items-center gap-4 text-white">
-          <span className="font-semibold">Contact Us:</span>
+          <span className="font-semibold">Social Links:</span>
           <a
             href="https://youtube.com/@10on10social"
             target="_blank"
