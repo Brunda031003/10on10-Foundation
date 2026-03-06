@@ -42,12 +42,11 @@ export default function ContactUs() {
 
       {/* Embedded Form */}
       <div className="w-full flex justify-center px-4">
-  <div className="w-full max-w-4xl">
+  <div className="w-full max-w-4xl min-h-[1100px]">
     <iframe
       src="https://app.10on10.net/enquiry"
       title="Request Call Back"
-      scrolling="no"
-      className="w-full h-[980px] md:h-[1000px] lg:h-[950px] border-0 rounded-xl shadow-lg"
+      className="w-full h-[1100px] md:h-[1050px] lg:h-[1000px] border-0 rounded-xl shadow-lg"
     />
   </div>
 </div>

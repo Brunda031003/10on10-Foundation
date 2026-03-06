@@ -32,7 +32,16 @@
       fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
+    <script>
+    function sendHeight() {
+      const height = document.body.scrollHeight;
+      window.parent.postMessage({ type: "resize", height }, "*");
+    }
 
+    window.addEventListener("load", sendHeight);
+    window.addEventListener("click", () => setTimeout(sendHeight, 200));
+    window.addEventListener("change", () => setTimeout(sendHeight, 200));
+    </script>
   </head>
   <body>
     <noscript><img height="1" width="1" style="display:none"
