@@ -25,10 +25,10 @@ export default function Footer() {
             <FaInstagram /> Instagram
           </a>
           <a
-            href="mailto:info@10on10.org"
+            href="/contact"
             className="flex items-center gap-1 hover:text-gray-300"
           >
-            <FaEnvelope /> Mail
+            <FaEnvelope /> Contact Us
           </a>
         </div>
 

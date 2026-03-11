@@ -1,4 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
+
+const sectionIds = ['home', 'about', 'impact', 'experience', 'blog']
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -6,23 +9,20 @@ const Navbar = () => {
   const [active, setActive] = useState('home')
 
   const navRef = useRef(null)
+  const location = useLocation()
+  const navigate = useNavigate()
+  const isHomePage = location.pathname === '/'
 
-  /* ---------------- Scroll background change ---------------- */
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id)
+    if (!el || !navRef.current) return
 
-      // ✅ Force Home active when at top (important for mobile)
-      if (window.scrollY < 50) {
-        setActive('home')
-      }
-    }
+    const navHeight = navRef.current.offsetHeight
+    const top = el.getBoundingClientRect().top + window.scrollY - navHeight
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.scrollTo({ top, behavior: 'smooth' })
+  }
 
-  /* ---------------- Set navbar height dynamically ---------------- */
   useEffect(() => {
     const setNavHeight = () => {
       if (navRef.current) {
@@ -38,96 +38,105 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', setNavHeight)
   }, [])
 
-  /* ---------------- Active link observer (FIXED) ---------------- */
   useEffect(() => {
-  let hasScrolled = false
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
 
-  const ids = ['home', 'about', 'impact', 'experience', 'blog', 'contact']
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      if (!hasScrolled) return   // 🚫 block initial false triggers
-
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActive(entry.target.id)
-        }
-      })
-    },
-    {
-      root: null,
-      rootMargin: '-50% 0px -40% 0px',
-      threshold: 0
+      if (isHomePage && window.scrollY < 50) {
+        setActive('home')
+      }
     }
-  )
 
-  ids.forEach((id) => {
-    const el = document.getElementById(id)
-    if (el) observer.observe(el)
-  })
+    handleScroll()
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [isHomePage])
 
-  const enableObserver = () => {
-    hasScrolled = true
-    window.removeEventListener('scroll', enableObserver)
-  }
+  useEffect(() => {
+    if (!isHomePage) return
 
-  window.addEventListener('scroll', enableObserver)
+    let hasScrolled = false
 
-  return () => {
-    observer.disconnect()
-    window.removeEventListener('scroll', enableObserver)
-  }
-}, [])
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!hasScrolled) return
 
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id)
+          }
+        })
+      },
+      {
+        root: null,
+        rootMargin: '-50% 0px -40% 0px',
+        threshold: 0,
+      }
+    )
 
-  /* ---------------- Smooth scroll handler ---------------- */
-  const handleNavClick = (e, id) => {
+    sectionIds.forEach((id) => {
+      const el = document.getElementById(id)
+      if (el) observer.observe(el)
+    })
+
+    const enableObserver = () => {
+      hasScrolled = true
+      window.removeEventListener('scroll', enableObserver)
+    }
+
+    window.addEventListener('scroll', enableObserver)
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', enableObserver)
+    }
+  }, [isHomePage])
+
+  useEffect(() => {
+    if (!isHomePage) return
+
+    const hashId = location.hash.replace('#', '')
+    if (!hashId) return
+
+    const timer = window.setTimeout(() => {
+      scrollToSection(hashId)
+    }, 0)
+
+    return () => window.clearTimeout(timer)
+  }, [isHomePage, location.hash])
+
+  const handleSectionNav = (e, id) => {
     if (e.metaKey || e.ctrlKey || e.button === 1) return
     e.preventDefault()
 
-    const el = document.getElementById(id)
-    if (!el || !navRef.current) return
+    if (!isHomePage) {
+      navigate(`/#${id}`)
+      setIsOpen(false)
+      return
+    }
 
-    const navHeight = navRef.current.offsetHeight
-    const top = el.getBoundingClientRect().top + window.scrollY - navHeight
-
-    window.scrollTo({ top, behavior: 'smooth' })
+    scrollToSection(id)
     setActive(id)
     setIsOpen(false)
   }
 
+  const handleContactNav = (e) => {
+    if (e.metaKey || e.ctrlKey || e.button === 1) return
+    e.preventDefault()
+
+    navigate('/contact')
+    setIsOpen(false)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const currentActive = isHomePage ? active : 'contact'
+
   const linkClass = (id) =>
     `hover:text-[#005c8f] transition ${
-      active === id ? 'text-[#005c8f] font-semibold' : ''
+      currentActive === id ? 'text-[#005c8f] font-semibold' : ''
     }`
 
-  /* ---------------- Intercept in-page anchor clicks ---------------- */
-  useEffect(() => {
-    const handler = (e) => {
-      const a = e.target.closest?.('a')
-      if (!a) return
-
-      const href = a.getAttribute('href')
-      if (!href || !href.startsWith('#')) return
-      if (e.metaKey || e.ctrlKey || e.button === 1) return
-
-      const id = href.slice(1)
-      const el = document.getElementById(id)
-      if (!el || !navRef.current) return
-
-      e.preventDefault()
-
-      const navHeight = navRef.current.offsetHeight
-      const top = el.getBoundingClientRect().top + window.scrollY - navHeight
-
-      window.scrollTo({ top, behavior: 'smooth' })
-      setActive(id)
-      setIsOpen(false)
-    }
-
-    document.addEventListener('click', handler, true)
-    return () => document.removeEventListener('click', handler, true)
-  }, [])
+  const sectionHref = (id) => (isHomePage ? `#${id}` : `/#${id}`)
 
   return (
     <nav
@@ -137,8 +146,7 @@ const Navbar = () => {
       `}
     >
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Logo */}
-        <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="flex items-center">
+        <a href={sectionHref('home')} onClick={(e) => handleSectionNav(e, 'home')} className="flex items-center">
           <img
             src={`${import.meta.env.BASE_URL || '/'}images/Logo.png`}
             alt="Logo"
@@ -146,17 +154,15 @@ const Navbar = () => {
           />
         </a>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 text-[#0074B5] font-medium">
-          <li><a href="#home" onClick={(e) => handleNavClick(e, 'home')} className={linkClass('home')}>Home</a></li>
-          <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')} className={linkClass('about')}>About</a></li>
-          <li><a href="#impact" onClick={(e) => handleNavClick(e, 'impact')} className={linkClass('impact')}>Stories of Success</a></li>
-          <li><a href="#experience" onClick={(e) => handleNavClick(e, 'experience')} className={linkClass('experience')}>10on10 Experience</a></li>
-          <li><a href="#blog" onClick={(e) => handleNavClick(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
-          <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className={linkClass('contact')}>Contact Us</a></li>
+          <li><a href={sectionHref('home')} onClick={(e) => handleSectionNav(e, 'home')} className={linkClass('home')}>Home</a></li>
+          <li><a href={sectionHref('about')} onClick={(e) => handleSectionNav(e, 'about')} className={linkClass('about')}>About</a></li>
+          <li><a href={sectionHref('impact')} onClick={(e) => handleSectionNav(e, 'impact')} className={linkClass('impact')}>Stories of Success</a></li>
+          <li><a href={sectionHref('experience')} onClick={(e) => handleSectionNav(e, 'experience')} className={linkClass('experience')}>10on10 Experience</a></li>
+          <li><a href={sectionHref('blog')} onClick={(e) => handleSectionNav(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
+          <li><a href="/contact" onClick={handleContactNav} className={linkClass('contact')}>Contact Us</a></li>
         </ul>
 
-        {/* Mobile Hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-[#0074B5] focus:outline-none"
@@ -173,15 +179,14 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden flex flex-col gap-4 px-4 pb-4 text-[#0074B5] font-medium bg-white/90 backdrop-blur-lg shadow-md">
-          <li><a href="#home" onClick={(e) => handleNavClick(e, 'home')} className={linkClass('home')}>Home</a></li>
-          <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')} className={linkClass('about')}>About</a></li>
-          <li><a href="#impact" onClick={(e) => handleNavClick(e, 'impact')} className={linkClass('impact')}>Stories of Success</a></li>
-          <li><a href="#experience" onClick={(e) => handleNavClick(e, 'experience')} className={linkClass('experience')}>10on10 Experience</a></li>
-          <li><a href="#blog" onClick={(e) => handleNavClick(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
-          <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className={linkClass('contact')}>Contact Us</a></li>
+          <li><a href={sectionHref('home')} onClick={(e) => handleSectionNav(e, 'home')} className={linkClass('home')}>Home</a></li>
+          <li><a href={sectionHref('about')} onClick={(e) => handleSectionNav(e, 'about')} className={linkClass('about')}>About</a></li>
+          <li><a href={sectionHref('impact')} onClick={(e) => handleSectionNav(e, 'impact')} className={linkClass('impact')}>Stories of Success</a></li>
+          <li><a href={sectionHref('experience')} onClick={(e) => handleSectionNav(e, 'experience')} className={linkClass('experience')}>10on10 Experience</a></li>
+          <li><a href={sectionHref('blog')} onClick={(e) => handleSectionNav(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
+          <li><a href="/contact" onClick={handleContactNav} className={linkClass('contact')}>Contact Us</a></li>
         </ul>
       )}
     </nav>
