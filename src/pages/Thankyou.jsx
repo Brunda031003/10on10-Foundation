@@ -15,7 +15,7 @@ export default function ThankYou() {
 
     setTimeout(() => {
       window.location.href = "/";
-    }, 10000);
+    }, 5000);
 
   }, []);
 
