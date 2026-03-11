@@ -38,6 +38,14 @@
     src="https://www.facebook.com/tr?id=2173022943463561&ev=PageView&noscript=1"
     /></noscript>
     <div id="root"></div>
+    <script>
+      const redirectPath = sessionStorage.getItem('gh-pages-redirect-path')
+
+      if (redirectPath) {
+        sessionStorage.removeItem('gh-pages-redirect-path')
+        window.history.replaceState(null, '', redirectPath)
+      }
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
