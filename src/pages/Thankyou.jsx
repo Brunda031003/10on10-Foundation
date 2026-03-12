@@ -13,9 +13,9 @@ export default function ThankYou() {
       window.fbq('track', 'Lead', {}, { eventID: eventId });
     }
 
-    setTimeout(() => {
-      window.location.href = "/";
-    }, 5000);
+    // setTimeout(() => {
+    //   window.location.href = "/";
+    // }, 5000);
 
   }, []);
 
