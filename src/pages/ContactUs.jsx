@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useMemo } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function ContactUs() {
 
-  // generate event_id once
-  const [eventId] = useState(() => crypto.randomUUID());
+  const eventId = useMemo(() => crypto.randomUUID(), []);
+
+  const enquiryUrl = `https://app.10on10.net/enquiry?event_id=${eventId}`;
 
   return (
     <>
@@ -21,7 +22,7 @@ export default function ContactUs() {
             <div className="w-full max-w-4xl min-h-[1100px]">
 
               <iframe
-                src={`https://app.10on10.net/enquiry?event_id=${eventId}`}
+                src={enquiryUrl}
                 title="Request Call Back"
                 className="w-full h-[1100px] md:h-[1050px] lg:h-[1000px] border-0 rounded-xl shadow-lg"
               />
