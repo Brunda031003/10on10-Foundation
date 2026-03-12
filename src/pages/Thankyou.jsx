@@ -6,18 +6,21 @@ import Footer from "../components/Footer";
 export default function ThankYou() {
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const eventId = params.get("event_id");
+  const params = new URLSearchParams(window.location.search);
+  const eventId = params.get("event_id");
 
-    if (window.fbq) {
+  if (window.fbq) {
+    if (eventId) {
       window.fbq('track', 'Lead', {}, { eventID: eventId });
+    } else {
+      window.fbq('track', 'Lead');
     }
+  }
+  setTimeout(() => {
+      window.location.href = "/";
+    }, 6000);
 
-    // setTimeout(() => {
-    //   window.location.href = "/";
-    // }, 5000);
-
-  }, []);
+}, []);
 
   return (
     <div className="flex flex-col min-h-screen">
