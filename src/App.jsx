@@ -11,6 +11,7 @@ import Review from './components/Review'
 import Footer from './components/Footer'
 import Team  from './components/Team'
 import Experience from './components/Experience'
+import MetaPixelTracker from "./components/MetaPixelTracker";
 
 const App = () => {
   return (

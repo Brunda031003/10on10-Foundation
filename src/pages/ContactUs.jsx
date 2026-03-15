@@ -1,10 +1,15 @@
-import { useMemo } from "react";
+import { useMemo, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function ContactUs() {
 
   const eventId = useMemo(() => crypto.randomUUID(), []);
+  useEffect(() => {
+  if (window.fbq) {
+    window.fbq('track', 'Contact');
+  }
+}, []);
 
   const enquiryUrl = `https://app.10on10.net/enquiry?event_id=${eventId}`;
 
