@@ -18,10 +18,6 @@ const team = [
     desc: "Jyotsna is a certified Child Psychology and Parenting coach. Alongside her full-time corporate career, she empowers individuals to build self awareness, resilience, and positive change."
   },
   {
-    name: "Jyoti Gupta",
-    desc: "A HR professional and a certified Life Coach, Jyoti brings deep expertise to her impactful one-on-one coaching, transformative group workshops, and inspiring motivational talks."
-  },
-  {
     name: "Deepa Ranjith",
     desc: "Deepa has over 14 years of teaching experience in international schools. A Certified Yoga Trainer, Deepa inspires individuals to embrace lifelong learning, mindfulness, and the joy of self-discovery."
   },
@@ -36,18 +32,6 @@ const team = [
   {
     name: "Jyoti Bhosle",
     desc: "Jyoti is an experienced HR professional who guides individuals and organisations to build clarity, confidence, and balance. She empowers them to unlock their potential and lead happier, more fulfilling lives."
-  },
-  {
-    name: "Shraddha Balakrishnan",
-    desc: "Shraddha is a CA with 6+ years in corporate banking. Alongside her corporate career, she devotes herself to education and empowerment, helping individuals find personal breakthroughs."
-  },
-  {
-    name: "Richa Sekhar",
-    desc: "Richa empowers individuals and teams through process standardisation and behavioural training. She nurtures excellence within using neuro science, Image Management, Visual Facilitation, and experiential learning."
-  },
-  {
-    name: "Ishara Ahmed",
-    desc: "Ishara has extensive global experience in guiding individuals through personal and professional evolution. Her mission is rooted in empowerment, particularly in uplifting women and supporting students as they navigate the pressures that often hinder their growth."
   },
   {
     name: "M S Krishnan",
@@ -71,10 +55,9 @@ const Team = () => {
       </div>
 
       <div className="max-w-7xl mx-auto">
-        
-        {/* First 10 Members */}
+        {/* First row: 5 members */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
-          {team.slice(0, 10).map((member, index) => (
+          {team.slice(0, 5).map((member, index) => (
             <TeamCard
               key={index}
               member={member}
@@ -83,14 +66,14 @@ const Team = () => {
           ))}
         </div>
 
-        {/* Last 3 Members – Centered */}
+        {/* Second row: 4 members, centered on larger screens */}
         <div className="flex justify-center">
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {team.slice(10).map((member, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {team.slice(5).map((member, index) => (
               <TeamCard
                 key={index}
                 member={member}
-                img={`${base}images/team/${index + 11}.jpg`}
+                img={`${base}images/team/${index + 6}.jpg`}
               />
             ))}
           </div>
