@@ -55,9 +55,9 @@ const Team = () => {
       </div>
 
       <div className="max-w-7xl mx-auto">
-        {/* First row: 5 members */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
-          {team.slice(0, 5).map((member, index) => (
+        {/* Mobile: single continuous grid */}
+        <div className="grid grid-cols-2 gap-6 md:hidden">
+          {team.map((member, index) => (
             <TeamCard
               key={index}
               member={member}
@@ -66,16 +66,28 @@ const Team = () => {
           ))}
         </div>
 
-        {/* Second row: 4 members, centered on larger screens */}
-        <div className="flex justify-center">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {team.slice(5).map((member, index) => (
+        {/* Tablet/Desktop: first row 5 + centered second row 4 */}
+        <div className="hidden md:block">
+          <div className="grid md:grid-cols-5 gap-6 mb-8">
+            {team.slice(0, 5).map((member, index) => (
               <TeamCard
                 key={index}
                 member={member}
-                img={`${base}images/team/${index + 6}.jpg`}
+                img={`${base}images/team/${index + 1}.jpg`}
               />
             ))}
+          </div>
+
+          <div className="flex justify-center">
+            <div className="grid md:grid-cols-4 gap-6">
+              {team.slice(5).map((member, index) => (
+                <TeamCard
+                  key={index}
+                  member={member}
+                  img={`${base}images/team/${index + 6}.jpg`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
