@@ -10,10 +10,6 @@ const team = [
     desc: "Divya has spent over two decades empowering thousands of women entrepreneurs. She helps them develop a sense of purpose, direction, and fulfilment in their lives."
   },
   {
-    name: "Vinod V M",
-    desc: "Following a 40-year career in the pharmaceutical industry, Vinod helps students, professionals, and parents grow through empathy, insight, and genuine connection."
-  },
-  {
     name: "Jyotsna Fernandes",
     desc: "Jyotsna is a certified Child Psychology and Parenting coach. Alongside her full-time corporate career, she empowers individuals to build self awareness, resilience, and positive change."
   },
@@ -66,10 +62,10 @@ const Team = () => {
           ))}
         </div>
 
-        {/* Tablet/Desktop: first row 5 + centered second row 4 */}
+        {/* Tablet/Desktop: first row 4 + centered second row 4 */}
         <div className="hidden md:block">
-          <div className="grid md:grid-cols-5 gap-6 mb-8">
-            {team.slice(0, 5).map((member, index) => (
+          <div className="grid md:grid-cols-4 gap-6 mb-8">
+            {team.slice(0, 4).map((member, index) => (
               <TeamCard
                 key={index}
                 member={member}
@@ -80,11 +76,11 @@ const Team = () => {
 
           <div className="flex justify-center">
             <div className="grid md:grid-cols-4 gap-6">
-              {team.slice(5).map((member, index) => (
+              {team.slice(4, 8).map((member, index) => (
                 <TeamCard
                   key={index}
                   member={member}
-                  img={`${base}images/team/${index + 6}.jpg`}
+                  img={`${base}images/team/${index + 5}.jpg`}
                 />
               ))}
             </div>
