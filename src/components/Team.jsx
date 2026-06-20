@@ -37,6 +37,7 @@ const team = [
 
 const Team = () => {
   const base = import.meta.env.BASE_URL || "/";
+  const teamImage = (index) => `${base}images/team/${index + 1}.jpg?v=20260620`;
 
   return (
     <section
@@ -57,7 +58,7 @@ const Team = () => {
             <TeamCard
               key={index}
               member={member}
-              img={`${base}images/team/${index + 1}.jpg`}
+              img={teamImage(index)}
             />
           ))}
         </div>
@@ -69,7 +70,7 @@ const Team = () => {
               <TeamCard
                 key={index}
                 member={member}
-                img={`${base}images/team/${index + 1}.jpg`}
+                img={teamImage(index)}
               />
             ))}
           </div>
@@ -80,7 +81,7 @@ const Team = () => {
                 <TeamCard
                   key={index}
                   member={member}
-                  img={`${base}images/team/${index + 5}.jpg`}
+                  img={teamImage(index + 4)}
                 />
               ))}
             </div>
