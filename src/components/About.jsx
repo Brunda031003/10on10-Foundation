@@ -4,79 +4,130 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full bg-[#1b81bc] py-16 px-6 scroll-mt-20 md:scroll-mt-24"
+      className="w-full bg-[#1b81bc] text-white py-16 md:py-20 px-4"
     >
-      {/* Heading */}
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-white">
-          ABOUT US
-        </h2>
+      <div className="max-w-7xl mx-auto">
+        <div className="text-base md:text-[17px] leading-8 space-y-10">
+          <div>
+            <h3 className="text-2xl font-bold mb-3">
+              Every life holds untapped potential.
+            </h3>
 
-        {/* Underline */}
-        <div className="flex justify-center items-center mt-4 space-x-2">
-          <span className="block w-20 h-1 bg-white rounded-full"></span>
-          <span className="block w-3 h-3 bg-white rounded-full"></span>
+            <p className="mb-6">
+              Not the potential to become someone else—but to become more fully
+              themselves.
+            </p>
+
+            <p className="mb-2">
+              At <strong>10on10</strong>, we believe the most meaningful change
+              begins within. We believe in nurturing people who are{" "}
+              <strong>Resourceful. Responsible. Resilient.</strong>
+            </p>
+
+            <p className="ml-5">
+              <strong>Resourceful</strong> enough to see possibilities where
+              others see obstacles.
+            </p>
+
+            <p className="ml-5">
+              <strong>Responsible</strong> enough to own their choices and the
+              impact they have on others.
+            </p>
+
+            <p className="ml-5 mb-6">
+              <strong>Resilient</strong> enough to keep moving
+              forward—whatever life brings.
+            </p>
+
+            <p>
+              Through experiences for students, young adults, parents,
+              educators, institutions, organisations and communities, we help
+              people discover what is already within them.
+            </p>
+
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold mb-3">
+              Imagine a generation that chooses possibility over limitation.
+            </h3>
+
+            <p>
+              A generation that meets life with confidence, clarity, and
+              character.
+            </p>
+
+            <p>
+              That thinks <strong>resourcefully.</strong> Acts{" "}
+              <strong>responsibly.</strong> Responds{" "}
+              <strong>resiliently.</strong>
+            </p>
+
+            <p className="mb-6">
+              This is the future we are working towards.
+            </p>
+
+            <p>
+              Over the next ten years, we aim to reach{" "}
+              <strong>10 million people</strong>—helping them discover the
+              mindset and self-belief to navigate life with purpose.
+            </p>
+
+            <p>
+              Because success is measured not only by what we achieve—but by{" "}
+              <strong>who we become.</strong>
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold mb-3">
+              Lasting change begins within.
+            </h3>
+
+            <p>
+              Each of us experiences the world through a unique lens.
+            </p>
+
+            <p>
+              Shaped by our experiences, relationships, and beliefs, it
+              influences how we think, how we feel, and what we believe is
+              possible.
+            </p>
+
+            <p className="mb-6">
+              Some perspectives help us grow. Others quietly hold us back.
+            </p>
+
+            <p className="mb-6">
+              At <strong>10on10</strong>, we help people see that lens with
+              fresh eyes. Not to become someone different—but to discover
+              what's already within them.
+            </p>
+
+            <p>
+              To think more <strong>resourcefully.</strong> To choose more{" "}
+              <strong>responsibly.</strong> To live more{" "}
+              <strong>resiliently.</strong>
+            </p>
+
+            <p className="mb-6">
+              Because lasting change doesn't begin by changing our
+              circumstances.
+            </p>
+
+            <p>
+              It begins by changing how we understand ourselves. And when that
+              changes, everything else can too.
+            </p>
+          </div>
+
+          <div className="text-center pt-8">
+            <p className="text-2xl font-bold mb-2">
+              The direction has always been within.
+            </p>
+            <p className="text-lg font-semibold">All that's left is to follow it.</p>
+          </div>
         </div>
-      </div>
-
-      {/* Content */}
-      <div className="max-w-5xl mx-auto text-white space-y-10 leading-relaxed text-justify align-center">
-
-        {/* Who We Are */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-4">Who We Are</h3>
-          <p className="mb-4">
-            At <strong>10on10</strong>, we’re people first — people who have walked different paths,
-            faced our own challenges, and learned how powerful inner change can be.
-            We come from diverse backgrounds across India, but we’re united by one
-            shared purpose:
-          </p>
-
-          <p className="font-bold mb-4">
-            To nurture a generation of people who are Resourceful, Responsible, and
-            Resilient — people who believe in themselves, aim high, pursue
-            excellence, and contribute meaningfully to the world.
-          </p>
-
-          <p>
-            We work closely with students, young adults, parents, educators, and
-            institutions, creating experiences that help real change happen —
-            from within.
-          </p>
-        </div>
-
-        {/* Vision */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-4">Our Vision</h3>
-          <p className="mb-4">We imagine a world where young people grow into adults who:</p>
-          <ul className="list-disc list-inside space-y-2 mb-4">
-            <li>Think and act <strong>resourcefully</strong></li>
-            <li>Take <strong>responsibility</strong> for their choices and their impact</li>
-            <li>Face life’s challenges with <strong>resilience</strong></li>
-          </ul>
-          <p>
-            To turn this vision into reality, we’ve committed ourselves to empowering<strong> 10 million young people over the next 10 years</strong> — helping them grow not just academically or professionally, but emotionally and mentally as well.
-          </p>
-        </div>
-
-        {/* What We Do */}
-        <div>
-          <h3 className="text-2xl font-semibold mb-4">What We Do</h3>
-          <p className="mb-4">
-            The <strong>10on10 Foundation</strong> conducts <strong>one-day Personal Transformation Workshops</strong> for:
-          </p>
-          <ul className="list-disc list-inside space-y-2 mb-4">
-            <li><strong>Students (12–21 years)</strong></li>
-            <li><strong>Adults (21+ years)</strong></li>
-          </ul>
-          <p className="mb-4">
-            These aren’t typical workshops. They are <strong>highly interactive,
-            activity-based experiences</strong> that work at a deeper level — helping
-            participants understand why they think, feel, and act the way they do,
-            and how to change what no longer serves them.
-          </p>
-        </div>
-
       </div>
     </section>
   );

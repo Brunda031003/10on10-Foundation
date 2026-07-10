@@ -1,27 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
-
-const sectionIds = ['home', 'about', 'impact', 'experience', 'blog']
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [active, setActive] = useState('home')
 
   const navRef = useRef(null)
   const location = useLocation()
   const navigate = useNavigate()
-  const isHomePage = location.pathname === '/'
-
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id)
-    if (!el || !navRef.current) return
-
-    const navHeight = navRef.current.offsetHeight
-    const top = el.getBoundingClientRect().top + window.scrollY - navHeight
-
-    window.scrollTo({ top, behavior: 'smooth' })
-  }
+  const activePath = location.pathname
 
   useEffect(() => {
     const setNavHeight = () => {
@@ -41,84 +28,12 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
-
-      if (isHomePage && window.scrollY < 50) {
-        setActive('home')
-      }
     }
 
     handleScroll()
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [isHomePage])
-
-  useEffect(() => {
-    if (!isHomePage) return
-
-    let hasScrolled = false
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (!hasScrolled) return
-
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id)
-          }
-        })
-      },
-      {
-        root: null,
-        rootMargin: '-50% 0px -40% 0px',
-        threshold: 0,
-      }
-    )
-
-    sectionIds.forEach((id) => {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
-    })
-
-    const enableObserver = () => {
-      hasScrolled = true
-      window.removeEventListener('scroll', enableObserver)
-    }
-
-    window.addEventListener('scroll', enableObserver)
-
-    return () => {
-      observer.disconnect()
-      window.removeEventListener('scroll', enableObserver)
-    }
-  }, [isHomePage])
-
-  useEffect(() => {
-    if (!isHomePage) return
-
-    const hashId = location.hash.replace('#', '')
-    if (!hashId) return
-
-    const timer = window.setTimeout(() => {
-      scrollToSection(hashId)
-    }, 0)
-
-    return () => window.clearTimeout(timer)
-  }, [isHomePage, location.hash])
-
-  const handleSectionNav = (e, id) => {
-    if (e.metaKey || e.ctrlKey || e.button === 1) return
-    e.preventDefault()
-
-    if (!isHomePage) {
-      navigate(`/#${id}`)
-      setIsOpen(false)
-      return
-    }
-
-    scrollToSection(id)
-    setActive(id)
-    setIsOpen(false)
-  }
+  }, [])
 
   const handleContactNav = (e) => {
     if (e.metaKey || e.ctrlKey || e.button === 1) return
@@ -129,14 +44,20 @@ const Navbar = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const currentActive = isHomePage ? active : 'contact'
+  const isActive = (path) => activePath === path
 
-  const linkClass = (id) =>
+  const linkClass = (path) =>
     `hover:text-[#005c8f] transition ${
-      currentActive === id ? 'text-[#005c8f] font-semibold' : ''
+      isActive(path) ? 'text-[#005c8f] font-semibold underline underline-offset-4' : ''
     }`
 
-  const sectionHref = (id) => (isHomePage ? `#${id}` : `/#${id}`)
+  const navItems = [
+    { label: 'Home', to: '/' },
+    { label: 'Experience', to: '/experience' },
+    { label: 'North Star', to: '/north-star' },
+    { label: 'Momentum', to: '/momentum' },
+    { label: 'Testimonials', to: '/testimonials' },
+  ]
 
   return (
     <nav
@@ -146,21 +67,27 @@ const Navbar = () => {
       `}
     >
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <a href={sectionHref('home')} onClick={(e) => handleSectionNav(e, 'home')} className="flex items-center">
+        <Link to="/" className="flex items-center">
           <img
             src={`${import.meta.env.BASE_URL || '/'}images/Logo.png`}
             alt="Logo"
             className="h-10 w-auto"
           />
-        </a>
+        </Link>
 
         <ul className="hidden md:flex gap-6 text-[#0074B5] font-medium">
-          <li><a href={sectionHref('home')} onClick={(e) => handleSectionNav(e, 'home')} className={linkClass('home')}>Home</a></li>
-          <li><a href={sectionHref('about')} onClick={(e) => handleSectionNav(e, 'about')} className={linkClass('about')}>About</a></li>
-          <li><a href={sectionHref('impact')} onClick={(e) => handleSectionNav(e, 'impact')} className={linkClass('impact')}>Stories of Success</a></li>
-          <li><a href={sectionHref('experience')} onClick={(e) => handleSectionNav(e, 'experience')} className={linkClass('experience')}>10on10 Experience</a></li>
-          <li><a href={sectionHref('blog')} onClick={(e) => handleSectionNav(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
-          <li><a href="/contact" onClick={handleContactNav} className={linkClass('contact')}>Contact Us</a></li>
+          {navItems.map((item) => (
+            <li key={item.to}>
+              <Link to={item.to} className={linkClass(item.to)}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <a href="/contact" onClick={handleContactNav} className={linkClass('/contact')}>
+              Contact Us
+            </a>
+          </li>
         </ul>
 
         <button
@@ -181,12 +108,18 @@ const Navbar = () => {
 
       {isOpen && (
         <ul className="md:hidden flex flex-col gap-4 px-4 pb-4 text-[#0074B5] font-medium bg-white/90 backdrop-blur-lg shadow-md">
-          <li><a href={sectionHref('home')} onClick={(e) => handleSectionNav(e, 'home')} className={linkClass('home')}>Home</a></li>
-          <li><a href={sectionHref('about')} onClick={(e) => handleSectionNav(e, 'about')} className={linkClass('about')}>About</a></li>
-          <li><a href={sectionHref('impact')} onClick={(e) => handleSectionNav(e, 'impact')} className={linkClass('impact')}>Stories of Success</a></li>
-          <li><a href={sectionHref('experience')} onClick={(e) => handleSectionNav(e, 'experience')} className={linkClass('experience')}>10on10 Experience</a></li>
-          <li><a href={sectionHref('blog')} onClick={(e) => handleSectionNav(e, 'blog')} className={linkClass('blog')}>Blog</a></li>
-          <li><a href="/contact" onClick={handleContactNav} className={linkClass('contact')}>Contact Us</a></li>
+          {navItems.map((item) => (
+            <li key={item.to}>
+              <Link to={item.to} onClick={() => setIsOpen(false)} className={linkClass(item.to)}>
+                {item.label}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <a href="/contact" onClick={handleContactNav} className={linkClass('/contact')}>
+              Contact Us
+            </a>
+          </li>
         </ul>
       )}
     </nav>

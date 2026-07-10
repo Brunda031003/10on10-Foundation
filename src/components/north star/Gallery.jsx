@@ -52,7 +52,7 @@ import React, { useMemo } from "react";
 const Gallery = () => {
   // Import student images
   const studentImages = Object.values(
-    import.meta.glob("../assets/gallery/students/*.{jpg,jpeg,png,webp,avif}", {
+    import.meta.glob("../../assets/gallery/students/*.{jpg,jpeg,png,webp,avif}", {
       eager: true,
       query: "?url",
       import: "default",
@@ -61,7 +61,7 @@ const Gallery = () => {
 
   // Import adult images
   const adultImages = Object.values(
-    import.meta.glob("../assets/gallery/adults/*.{jpg,jpeg,png,webp,avif}", {
+    import.meta.glob("../../assets/gallery/adults/*.{jpg,jpeg,png,webp,avif}", {
       eager: true,
       query: "?url",
       import: "default",
@@ -84,13 +84,8 @@ const Gallery = () => {
   const galleryImages = [...randomStudents, ...randomAdults];
 
   return (
-    <section className="bg-[#1b81bc] py-16 px-4 md:px-8">
+    <section className="bg-[#fea248] py-16 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Heading */}
-        <h2 className="text-white text-4xl md:text-5xl font-bold mb-10 text-center">
-          GALLERY
-        </h2>
-
         {/* Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
           {galleryImages.map((img, index) => (

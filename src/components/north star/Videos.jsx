@@ -54,15 +54,12 @@ const Videos = () => {
   }, []);
 
   return (
-    <section className="w-full py-16 px-6 bg-white">
+    <section className="w-full py-16 px-6 bg-[#fea248]">
       {/* Title */}
       <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#0074B5] mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
           Stories Of Transformation
         </h2>
-        <p className="text-black text-lg md:text-xl max-w-2xl mx-auto">
-          Explore our latest activities, impact stories, and inspirational moments.
-        </p>
       </div>
 
       {/* STUDENTS ROW */}

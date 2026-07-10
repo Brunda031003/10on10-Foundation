@@ -58,3 +58,69 @@ body {
 	font-weight: 400;
 	font-style: normal;
 }
+.testimonial-mask {
+  overflow: hidden;
+  padding: 12px 0 20px;
+}
+
+.testimonial-track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+  animation: testimonial-scroll 38s linear infinite;
+}
+
+/* Pause movement while the user reads a card */
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-card {
+  width: 280px;
+  min-height: 260px;
+}
+
+@media (min-width: 640px) {
+  .testimonial-track {
+    gap: 20px;
+  }
+
+  .testimonial-card {
+    width: 320px;
+    min-height: 270px;
+  }
+}
+
+@media (min-width: 768px) {
+  .testimonial-track {
+    gap: 24px;
+  }
+
+  .testimonial-card {
+    width: 370px;
+    min-height: 280px;
+  }
+}
+
+@keyframes testimonial-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 12px));
+  }
+}
+
+/* Respect accessibility preferences */
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-track {
+    animation: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .testimonial-card {
+    scroll-snap-align: center;
+  }
+}
