@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Gallery from "../components/north star/Gallery";
-import NorthstarContent from "../components/north star/NorthstarContent";
+import NorthstarContent from "../components/north star/NorthStarContent";
 import NorthStarLogo from "../components/north star/NorthStarLogo";
 import Videos from "../components/north star/Videos";
 
