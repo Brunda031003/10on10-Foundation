@@ -10,7 +10,7 @@ import Review from './components/Review'
 import Footer from './components/Footer'
 import Team  from './components/Team'
 import Experience from './pages/Experience'
-import LearnMore from "./components/LearnMore";
+import LearnMore from "./components/Learnmore";
 
 const App = () => {
   return (
