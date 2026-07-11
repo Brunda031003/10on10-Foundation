@@ -1,11 +1,11 @@
 export default function ExperienceDescription() {
   return (
-    <section className="w-full bg-[#1b81bc] text-white pt-16 pb-4 md:pt-20 md:pb-6 px-6">
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+    <section className="w-full bg-[#1b81bc] text-white pt-16 pb-4 md:pt-20 md:pb-6 px-4">
+      <div className="max-w-7xl mx-auto">
         <div className="text-base md:text-[17px] leading-8 space-y-10">
 
         <div>
-          <h3 className="font-bold mb-2">No one teaches us how to navigate life.</h3>
+          <h3 className="font-bold mb-2 text-base md:text-[17px]">No one teaches us how to navigate life.</h3>
           <p>
             Whether you’re a student discovering who you are, or an adult balancing the demands of work, family, and life, challenges are inevitable.
           </p>
@@ -34,33 +34,33 @@ export default function ExperienceDescription() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-2">Change begins with awareness.</h3>
+          <h3 className="font-bold mb-2 text-base md:text-[17px]">Change begins with awareness.</h3>
           <p>Transformation doesn’t begin by learning more. It begins by seeing differently.</p>
         </div>
 
         <div>
-          <h4 className="font-bold">See differently.</h4>
+          <h4 className="font-bold text-base md:text-[17px]">See differently.</h4>
           <p>
             Discover why two people can experience the same situation in completely different ways—and how those perspectives shape our emotions, decisions, relationships, and potential.
           </p>
         </div>
 
         <div>
-          <h4 className="font-bold">Know yourself better.</h4>
+          <h4 className="font-bold text-base md:text-[17px]">Know yourself better.</h4>
           <p>
             Reflect through a guided self-assessment that deepens awareness of your strengths, patterns, and opportunities for growth.
           </p>
         </div>
 
         <div>
-          <h4 className="font-bold">Move forward with confidence.</h4>
+          <h4 className="font-bold text-base md:text-[17px]">Move forward with confidence.</h4>
           <p>
             Move beyond one emotion that may be holding you back, creating space for a more <strong>resourceful</strong>, <strong>responsible</strong>, and <strong>resilient</strong> way of responding to life.
           </p>
         </div>
 
         <div>
-          <h3 className="font-bold mb-2">Transformation is meant to be experienced.</h3>
+          <h3 className="font-bold mb-2 text-base md:text-[17px]">Transformation is meant to be experienced.</h3>
           <p>Some things can be explained. Others have to be lived.</p>
           <p>
             That’s why The <strong>10on10 Experience</strong> is offered as a complimentary introduction for schools, colleges, universities, organisations, and community groups.
@@ -71,7 +71,7 @@ export default function ExperienceDescription() {
         </div>
 
         <div>
-          <h4 className="font-bold mb-2">Experience Details</h4>
+          <h4 className="font-bold mb-2 text-base md:text-[17px]">Experience Details</h4>
           <ul className="list-disc list-inside">
             <li>Duration: 3 hours</li>
             <li>Audience: Students (12–21) and Adults (21+)</li>
@@ -81,7 +81,7 @@ export default function ExperienceDescription() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-2">Let’s create something meaningful together.</h3>
+          <h3 className="font-bold mb-2 text-base md:text-[17px]">Let’s create something meaningful together.</h3>
           <p>
             Bring The <strong>10on10 Experience</strong> to your school, college, organisation, or community.
           </p>

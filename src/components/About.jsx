@@ -122,11 +122,13 @@ const About = () => {
           </div>
 
           <div className="text-center pt-8">
-            <p className=" font-bold mb-2">
-              The direction has always been within.
-            </p>
-            <p className="text-lg font-semibold">All that's left is to follow it.</p>
-          </div>
+          <p className="font-bold text-2xl">
+            The direction has always been within.
+          </p>
+          <p className="font-bold mt-2 text-lg">
+            All that's left is to follow it.
+          </p>
+        </div>
         </div>
       </div>
     </section>

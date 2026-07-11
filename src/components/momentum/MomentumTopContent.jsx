@@ -1,7 +1,7 @@
 export default function MomentumTopContent() {
   return (
-    <section className="bg-[#087db3] text-white pt-16 pb-4 md:pt-20 md:pb-6 px-6">
-      <div className="max-w-6xl mx-auto text-[14px] md:text-[15px] leading-relaxed space-y-10">
+    <section className="bg-[#087db3] text-white pt-16 pb-4 md:pt-20 md:pb-6 px-4">
+      <div className="max-w-6xl mx-auto text-base md:text-[17px] leading-8 space-y-10">
 
         <div>
           <h3 className="font-bold mb-2">

@@ -1,11 +1,11 @@
 export default function NorthStarContent() {
   return (
-    <section className="bg-[#087db3] text-white pt-16 pb-4 md:pt-20 md:pb-6 px-6">
+    <section className="bg-[#087db3] text-white pt-16 pb-4 md:pt-20 md:pb-6 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-base md:text-[17px] leading-8 space-y-10">
 
         <div>
-          <h3 className="font-bold mb-2">
+          <h3 className="font-bold mb-2 text-base md:text-[17px]">
             We all need a North Star.
           </h3>
 
@@ -35,7 +35,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className=" font-bold mb-2">
+          <h3 className="font-bold mb-2 text-base md:text-[17px]">
             Clarity changes everything.
           </h3>
 
@@ -60,7 +60,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-2">
+          <h3 className="font-bold mb-2 text-base md:text-[17px]">
             Find your direction.
           </h3>
 
@@ -95,7 +95,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-2">
+          <h3 className="font-bold mb-2 text-base md:text-[17px]">
             Your North Star has always been there.
           </h3>
 
@@ -115,7 +115,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-2">Workshop Details</h3>
+          <h3 className="font-bold mb-2 text-base md:text-[17px]">Workshop Details</h3>
 
           <ul className="list-disc list-inside leading-tight">
             <li>
@@ -138,11 +138,11 @@ export default function NorthStarContent() {
           </ul>
         </div>
 
-        <div className="text-center pt-4">
-          <p className="text-lg md:text-xl font-bold">
+        <div className="text-center pt-8">
+          <p className="font-bold text-2xl">
             Your future already knows the direction.
           </p>
-          <p className="font-bold mt-3">
+          <p className="font-bold mt-2 text-lg">
             Let's discover it—together.
           </p>
         </div>
