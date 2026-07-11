@@ -9,11 +9,11 @@ const About = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-base md:text-[17px] leading-8 space-y-10">
           <div>
-            <h3 className="text-2xl font-bold mb-3">
+            <h3 className="font-bold mb-2">
               Every life holds untapped potential.
             </h3>
 
-            <p className="mb-6">
+            <p className="mb-2">
               Not the potential to become someone else—but to become more fully
               themselves.
             </p>
@@ -24,17 +24,17 @@ const About = () => {
               <strong>Resourceful. Responsible. Resilient.</strong>
             </p>
 
-            <p className="ml-5">
+            <p className="ml-2">
               <strong>Resourceful</strong> enough to see possibilities where
               others see obstacles.
             </p>
 
-            <p className="ml-5">
+            <p className="ml-2">
               <strong>Responsible</strong> enough to own their choices and the
               impact they have on others.
             </p>
 
-            <p className="ml-5 mb-6">
+            <p className="ml-2 mb-2">
               <strong>Resilient</strong> enough to keep moving
               forward—whatever life brings.
             </p>
@@ -48,7 +48,7 @@ const About = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-3">
+            <h3 className="font-bold mb-2">
               Imagine a generation that chooses possibility over limitation.
             </h3>
 
@@ -63,7 +63,7 @@ const About = () => {
               <strong>resiliently.</strong>
             </p>
 
-            <p className="mb-6">
+            <p className="mb-2">
               This is the future we are working towards.
             </p>
 
@@ -80,7 +80,7 @@ const About = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-3">
+            <h3 className="font-bold mb-2">
               Lasting change begins within.
             </h3>
 
@@ -94,11 +94,11 @@ const About = () => {
               possible.
             </p>
 
-            <p className="mb-6">
+            <p className="mb-2">
               Some perspectives help us grow. Others quietly hold us back.
             </p>
 
-            <p className="mb-6">
+            <p className="mb-2">
               At <strong>10on10</strong>, we help people see that lens with
               fresh eyes. Not to become someone different—but to discover
               what's already within them.
@@ -110,7 +110,7 @@ const About = () => {
               <strong>resiliently.</strong>
             </p>
 
-            <p className="mb-6">
+            <p className="mb-2">
               Because lasting change doesn't begin by changing our
               circumstances.
             </p>
@@ -122,7 +122,7 @@ const About = () => {
           </div>
 
           <div className="text-center pt-8">
-            <p className="text-2xl font-bold mb-2">
+            <p className=" font-bold mb-2">
               The direction has always been within.
             </p>
             <p className="text-lg font-semibold">All that's left is to follow it.</p>

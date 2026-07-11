@@ -97,7 +97,7 @@ const Impact = () => {
       {/* Students */}
       <div className="max-w-7xl mx-auto">
         <h2 className="text-[gray-800] text-4xl md:text-5xl font-bold mb-8 text-center">
-          Stories Of Success - Students
+          Stories Of Success
         </h2>
 
         <div className="relative bg-[#fea248] rounded-lg overflow-hidden">

@@ -5,7 +5,7 @@ export default function NorthStarContent() {
         <div className="text-base md:text-[17px] leading-8 space-y-10">
 
         <div>
-          <h3 className="text-2xl font-bold mb-3">
+          <h3 className="font-bold mb-2">
             We all need a North Star.
           </h3>
 
@@ -35,7 +35,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold mb-3">
+          <h3 className=" font-bold mb-2">
             Clarity changes everything.
           </h3>
 
@@ -60,7 +60,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold mb-3">
+          <h3 className="font-bold mb-2">
             Find your direction.
           </h3>
 
@@ -95,7 +95,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold mb-3">
+          <h3 className="font-bold mb-2">
             Your North Star has always been there.
           </h3>
 
@@ -115,7 +115,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-3">Workshop Details</h3>
+          <h3 className="font-bold mb-2">Workshop Details</h3>
 
           <ul className="list-disc list-inside leading-tight">
             <li>

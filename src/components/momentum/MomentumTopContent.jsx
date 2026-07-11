@@ -81,10 +81,10 @@ export default function MomentumTopContent() {
         </div>
 
         <div className="text-center pt-4">
-          <p className="font-bold text-lg">
+          <p className="font-bold text-2xl">
             Your future is waiting to be written.
           </p>
-          <p className="font-bold mt-2">
+          <p className="font-bold mt-2 text-lg">
             Let’s begin your next chapter—together.
           </p>
         </div>
