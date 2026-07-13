@@ -9,7 +9,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-base md:text-[17px] leading-8 space-y-10">
           <div>
-            <h3 className="font-bold mb-2">
+            <h3 className="font-bold pb-2 text-2xl md:text-3xl">
               Every life holds untapped potential.
             </h3>
 
@@ -48,7 +48,7 @@ const About = () => {
           </div>
 
           <div>
-            <h3 className="font-bold mb-2">
+            <h3 className="font-bold mb-2 text-lg md:text-xl">
               Imagine a generation that chooses possibility over limitation.
             </h3>
 
@@ -80,7 +80,7 @@ const About = () => {
           </div>
 
           <div>
-            <h3 className="font-bold mb-2">
+            <h3 className="font-bold mb-2 text-lg md:text-xl">
               Lasting change begins within.
             </h3>
 
@@ -122,10 +122,10 @@ const About = () => {
           </div>
 
           <div className="text-center pt-8">
-          <p className="font-bold text-2xl">
+          <p className="font-bold text-2xl md:text-3xl">
             The direction has always been within.
           </p>
-          <p className="font-bold mt-2 text-lg">
+          <p className="font-bold mt-2 text-lg md:text-xl">
             All that's left is to follow it.
           </p>
         </div>

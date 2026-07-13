@@ -5,7 +5,7 @@ export default function NorthStarContent() {
         <div className="text-base md:text-[17px] leading-8 space-y-10">
 
         <div>
-          <h3 className="font-bold mb-2 text-base md:text-[17px]">
+          <h3 className="font-bold pb-2 text-2xl md:text-3xl">
             We all need a North Star.
           </h3>
 
@@ -35,7 +35,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-2 text-base md:text-[17px]">
+          <h3 className="font-bold mb-2 text-lg md:text-xl">
             Clarity changes everything.
           </h3>
 
@@ -60,7 +60,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-2 text-base md:text-[17px]">
+          <h3 className="font-bold mb-2 text-lg md:text-xl">
             Find your direction.
           </h3>
 
@@ -95,7 +95,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-2 text-base md:text-[17px]">
+          <h3 className="font-bold mb-2 text-lg md:text-xl">
             Your North Star has always been there.
           </h3>
 
@@ -115,7 +115,7 @@ export default function NorthStarContent() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-2 text-base md:text-[17px]">Workshop Details</h3>
+          <h3 className="font-bold mb-2 text-lg md:text-xl">Workshop Details</h3>
 
           <ul className="list-disc list-inside leading-tight">
             <li>
@@ -139,10 +139,10 @@ export default function NorthStarContent() {
         </div>
 
         <div className="text-center pt-8">
-          <p className="font-bold text-2xl">
+          <p className="font-bold pb-2 text-2xl md:text-3xl">
             Your future already knows the direction.
           </p>
-          <p className="font-bold mt-2 text-lg">
+          <p className="font-bold mb-2 text-lg md:text-xl">
             Let's discover it—together.
           </p>
         </div>

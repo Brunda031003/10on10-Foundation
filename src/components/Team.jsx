@@ -1,6 +1,15 @@
 import React from "react";
 
 const team = [
+  
+  {
+    name: "M S Krishnan",
+    desc: "Krishnan has held senior leadership roles in multiple organisations across Asia-Pacific. He has worked with students, business professionals, corporate leaders, and homemakers."
+  },
+  {
+    name: "Deepa Ranjith",
+    desc: "Deepa has over 14 years of teaching experience in international schools. A Certified Yoga Trainer, Deepa inspires individuals to embrace lifelong learning, mindfulness, and the joy of self-discovery."
+  },
   {
     name: "Ambika Warrier",
     desc: "Dr. Ambika, an RCI-registered Rehabilitation Counsellor. She has over 20 years of corporate experience, along with 15 years as a counsellor and therapist."
@@ -14,10 +23,6 @@ const team = [
     desc: "Jyotsna is a certified Child Psychology and Parenting coach. Alongside her full-time corporate career, she empowers individuals to build self awareness, resilience, and positive change."
   },
   {
-    name: "Deepa Ranjith",
-    desc: "Deepa has over 14 years of teaching experience in international schools. A Certified Yoga Trainer, Deepa inspires individuals to embrace lifelong learning, mindfulness, and the joy of self-discovery."
-  },
-  {
     name: "Babita Singh",
     desc: "Babita is a dynamic entrepreneur with a strong background in business and community engagement. She inspires others to build confidence, embrace positive habits, and achieve their full potential."
   },
@@ -28,10 +33,6 @@ const team = [
   {
     name: "Jyoti Bhosle",
     desc: "Jyoti is an experienced HR professional who guides individuals and organisations to build clarity, confidence, and balance. She empowers them to unlock their potential and lead happier, more fulfilling lives."
-  },
-  {
-    name: "M S Krishnan",
-    desc: "Krishnan has held senior leadership roles in multiple organisations across Asia-Pacific. He has worked with students, business professionals, corporate leaders, and homemakers."
   }
 ];
 

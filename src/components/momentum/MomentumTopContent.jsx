@@ -1,10 +1,10 @@
 export default function MomentumTopContent() {
   return (
     <section className="bg-[#087db3] text-white pt-16 pb-4 md:pt-20 md:pb-6 px-4">
-      <div className="max-w-6xl mx-auto text-base md:text-[17px] leading-8 space-y-10">
+      <div className="max-w-7xl mx-auto text-base md:text-[17px] leading-8 space-y-10">
 
         <div>
-          <h3 className="font-bold mb-2">
+          <h3 className="font-bold pb-2 text-2xl md:text-3xl">
             Imagine becoming the author of your own story.
           </h3>
 
@@ -25,7 +25,7 @@ export default function MomentumTopContent() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-2">
+          <h3 className="font-bold mb-2 text-lg md:text-xl">
             The life you want begins with the way you see it.
           </h3>
 
@@ -56,7 +56,7 @@ export default function MomentumTopContent() {
         </div>
 
         <div>
-          <h3 className="font-bold mb-2">Your journey. Your pace.</h3>
+          <h3 className="font-bold mb-2 text-lg md:text-xl">Your journey. Your pace.</h3>
 
           <p>
             The <strong>10on10 Momentum</strong> programme is delivered as a
@@ -81,10 +81,10 @@ export default function MomentumTopContent() {
         </div>
 
         <div className="text-center pt-4">
-          <p className="font-bold text-2xl">
+          <p className="font-bold text-2xl md:text-3xl">
             Your future is waiting to be written.
           </p>
-          <p className="font-bold mt-2 text-lg">
+          <p className="font-bold mt-2 text-lg md:text-xl">
             Let’s begin your next chapter—together.
           </p>
         </div>
