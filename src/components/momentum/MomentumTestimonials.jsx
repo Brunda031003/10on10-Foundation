@@ -301,12 +301,6 @@ export default function MomentumTestimonials() {
             ))}
           </div>
         </div>
-
-        <div className="mt-7 flex justify-center gap-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-white" />
-          <span className="h-2.5 w-2.5 rounded-full bg-white/45" />
-          <span className="h-2.5 w-2.5 rounded-full bg-white/45" />
-        </div>
       </div>
     </section>
   );

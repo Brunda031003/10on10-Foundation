@@ -17,7 +17,7 @@ export default function Experience() {
       <ExperienceHero />
       <ExperienceDescription />
       <ProgramLogo />
-      {/* <ExperienceSponsors /> */}
+      <ExperienceSponsors />
       <Footer />
     </section>
   );
